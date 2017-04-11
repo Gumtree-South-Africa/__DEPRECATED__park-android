@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/White"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="visible" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/tabs_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/GrayBackground" >
+
+            <android.support.v4.view.PagerTabStripV22
+                android:id="@+id/tab_title"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_gravity="top"
+                android:paddingTop="@dimen/padding_top_tabstrip"
+                android:paddingLeft="@dimen/padding_left_tabstrip"
+                android:elevation="5dp"
+                android:background="@color/VivaTurquoiseTabs"
+                android:paddingRight="@dimen/padding_right_tabstrip"
+                android:paddingBottom="@dimen/padding_bottom_tabstrip" />
+
+        </android.support.v4.view.ViewPager>
+
+        <include layout="@layout/floating_action_button_publish"/>
+
+    </FrameLayout>
+
+</LinearLayout>

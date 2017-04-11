@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"
+        android:background="@drawable/rounded_rectangular_border">
+
+        <ImageView
+            android:id="@+id/iv_item_picture"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_image_height"
+            android:contentDescription="@null"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img_placeholder" />
+
+        <ImageView
+            android:id="@+id/iv_new_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/iv_item_picture"
+            android:contentDescription="@null"
+            android:scaleType="centerCrop"
+            android:src="@drawable/flag_new_item"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/iv_status_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/iv_item_picture"
+            android:contentDescription="@null"
+            android:scaleType="centerCrop"
+            android:src="@drawable/flag_pending"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/iv_like"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/iv_item_picture"
+            android:contentDescription="@null"
+            android:scaleType="centerCrop"
+            android:src="@drawable/corner_likes_selector" />
+
+        <ImageView
+            android:id="@+id/iv_rounded_shape"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/iv_item_picture"
+            android:layout_alignTop="@+id/iv_item_picture"
+            android:contentDescription="@null"
+            android:scaleType="centerCrop"
+            android:src="@drawable/mask_item_top" />
+
+        <TextView
+            android:id="@+id/tv_item_username"
+            style="@style/item_field.username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_item_picture"
+            android:singleLine="true"
+            android:visibility="gone" />
+
+        <com.ebay.park.views.ButtonDemi
+            android:id="@+id/btn_item_remove"
+            style="@style/Button.Follow.Remove.Group"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="4dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:layout_alignLeft="@+id/ly_controls"
+            android:layout_alignRight="@+id/ly_controls"
+            android:layout_below="@+id/iv_item_picture"
+            android:text="@string/group_remove_item"
+            android:gravity="center"
+            android:minHeight="0dp"
+            android:stateListAnimator="@null"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/ly_controls"
+            style="@style/item_field.values"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_below="@+id/iv_item_picture"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="-5dp"
+            android:paddingTop="5dp"
+            android:visibility="visible">
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingBottom="5dp">
+
+                <com.ebay.park.views.TextViewDemi
+                    android:id="@+id/tv_item_price"
+                    style="@style/item_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="3dp" />
+
+                <com.ebay.park.views.TextViewBook
+                    android:id="@+id/tv_item_likes"
+                    style="@style/item_values"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:drawableLeft="@drawable/icon_likes"
+                    android:drawablePadding="5dp"
+                    android:gravity="center_vertical"
+                    android:paddingRight="5dp" />
+            </FrameLayout>
+
+            <TextView
+                style="@style/item_values"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

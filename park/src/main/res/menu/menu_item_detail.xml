@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/share"
+        android:icon="@drawable/icon_white_share_115"
+        android:title="@string/share_on"
+        android:visible="false"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/like"
+        android:icon="@drawable/icon_white_like_fill_115"
+        android:title="@string/like_menu"
+        android:visible="false"
+        app:showAsAction="always" />
+
+</menu>

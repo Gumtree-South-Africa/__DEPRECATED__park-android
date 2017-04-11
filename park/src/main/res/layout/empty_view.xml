@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/empty_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/GrayBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <com.ebay.park.views.TextViewBook
+            android:id="@+id/empty_message"
+            style="@style/Label.DarkGray.Medium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="100dp"
+            android:gravity="center"
+            android:textStyle="normal"
+            android:textSize="22sp"/>
+
+        <com.ebay.park.views.TextViewBook
+            android:id="@+id/empty_hint"
+            style="@style/Label.DarkGray.Medium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:textStyle="normal"
+            android:gravity="center"
+            android:textSize="14sp"/>
+
+        <com.ebay.park.views.ButtonDemi
+            android:id="@+id/btn_action"
+            style="@style/Button.Follow"
+            android:layout_width="175dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="35dp"
+            android:visibility="gone"
+            android:stateListAnimator="@null" />
+    </LinearLayout>
+
+</ScrollView>

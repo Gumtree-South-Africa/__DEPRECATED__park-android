@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="NewParkColor">#1F98D5</color>
+    <color name="title_gray">#333333</color>
+    <color name="tab_background_gray">#D6D7DC</color>
+    <color name="background_gray">#EAEAEA</color>
+    <color name="new_light_gray">#FAFAFA</color>
+    <color name="unread_feed">#f1f1f1</color>
+    <color name="TWcolor">#76A9EA</color>
+    <color name="system_banner">#4A4A4A</color>
+    <color name="system_notification">#666666</color>
+    <color name="feed_filter_grey">#999999</color>
+    <color name="feed_filter_grey_border">#CCCCCC</color>
+    <color name="gray">#808080</color>
+    <color name="White">#FFFFFF</color>
+    <color name="WhiteLowAlpha">#CCFFFFFF</color>
+    <color name="WhiteSmoke">#F5F5F5</color>
+    <color name="Black">#000000</color>
+    <color name="NewOrange">#FF9720</color>
+    <color name="DissabledGrey">#D7D8DC</color>
+    <color name="VivaGreen">#B0CA00</color>
+    <color name="VivaRed">#D50021</color>
+    <color name="VivaBlue">#508FCA</color>
+    <color name="VivaYellow">#F3C300</color>
+    <color name="NewBackgroundGrey">#F4F5F7</color>
+    <color name="DividerColor">#D7D7D7</color>
+    <color name="SelectedCategory">#E2E2E2</color>
+    <color name="NegociateButton">#00AEF0</color>
+    <color name="accent">#1F98D5</color>
+    <color name="SpecialGrey">#F9F9F9</color>
+
+    <!-- Vivanuncios 2.0 -->
+
+    <color name="VivaTurquoise">#00D9DC</color>
+    <color name="VivaTurquoiseTabs">#00E4E7</color>
+    <color name="VivaTurquoiseLight">#6BE9EB</color>
+    <color name="VivaTurquoiseDark">#009C9E</color>
+    <color name="TabsTextNotFocused">#B8F4F6</color>
+    <color name="DarkGrayDrawer">#555555</color>
+    <color name="GrayDrawerSelected">#3B3B3B</color>
+    <color name="DarkGrayDivider">#888888</color>
+    <color name="GrayBackground">#ECECEC</color>
+    <color name="IndicatorOrange">#FF5531</color>
+    <color name="VivaLightBlue">#0099FF</color>
+    <color name="VivaDarkBlue">#00979A</color>
+    <color name="VivaTermsDarkBlue">#00494A</color>
+    <color name="GrayDisabled">#E6E6E6</color>
+    <color name="LightGray">#BBBBBB</color>
+    <color name="DarkOrange">#FF3B22</color>
+	<color name="LightGreyDivider">#EEEEEE</color>
+    <color name="DarkGrayGroups">#222222</color>
+    <color name="BlueGray">#93D4FF</color>
+    <color name="LightGraySeparator">#B3B3B3</color>
+    <color name="Yellow">#FFBC0A</color>
+    <color name="Green">#84CC03</color>
+    <color name="GrayForDark">#677C8B</color>
+    <color name="LightGrayEmail">#E4E4E4</color>
+    <color name="DarkGrayDividerProfile">#838383</color>
+    <color name="LightGrayEditProfile">#D5D5D5</color>
+    <color name="GraySocialNetwork">#D1D1D1</color>
+    <color name="ReportedRed">#EB1C24</color>
+    <color name="ChatTimeGray">#B0B0B0</color>
+    <color name="BlueOver">#0070FF</color>
+    <color name="DarkGreen">#3AAD01</color>
+    <color name="LightGrayDisable">#F0F0F0</color>
+    <color name="StatusbarBlue">#008284</color>
+    <color name="LegalGray">#C6C6C6</color>
+
+</resources>

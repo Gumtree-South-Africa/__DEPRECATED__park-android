@@ -1,0 +1,537 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:id="@+id/notif_config_main_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/White">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="29dp">
+
+        <com.ebay.park.views.TextViewDemi
+            android:id="@+id/tv_mypublications"
+            style="@style/NotificationConfig.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@+id/tv_mypublications_mail"
+            android:paddingTop="20dp"
+            android:text="@string/my_publications"/>
+
+        <com.ebay.park.views.TextViewDemi
+            android:id="@+id/tv_mypublications_notifications"
+            style="@style/NotificationConfig.Title.Subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/tv_mypublications"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical"
+            android:text="@string/notifications"/>
+
+        <com.ebay.park.views.TextViewDemi
+            android:id="@+id/tv_mypublications_mail"
+            style="@style/NotificationConfig.Title.Subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/tv_mypublications"
+            android:layout_toLeftOf="@id/tv_mypublications_notifications"
+            android:gravity="center"
+            android:text="@string/mail"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/LightGreyDivider"
+            android:layout_below="@id/tv_mypublications"/>
+
+        <com.ebay.park.views.TextViewBook
+            android:id="@+id/tv_email_item_pending"
+            style="@style/NotificationConfig.Label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_mypublications"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:gravity="center_vertical"
+            android:text="@string/notif_config_item_pending"/>
+
+        <FrameLayout
+            android:id="@+id/email_item_pending_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/tv_mypublications_mail"
+            android:layout_alignRight="@id/tv_mypublications_mail"
+            android:layout_below="@id/tv_mypublications_mail"
+            android:layout_marginTop="14dp"
+            android:layout_toLeftOf="@id/tv_mypublications_notifications"
+            android:paddingRight="14dp">
+
+            <CheckBox
+                android:id="@+id/email_item_pending"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:button="@null"
+                android:drawableRight="@drawable/checkbox_states"/>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/push_item_pending_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/email_item_pending_layout"
+            android:layout_alignLeft="@id/tv_mypublications_notifications"
+            android:layout_alignRight="@id/tv_mypublications_notifications"
+            android:layout_alignTop="@id/email_item_pending_layout"
+            android:paddingRight="13dp">
+
+            <CheckBox
+                android:id="@+id/push_item_pending"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:button="@null"
+                android:drawableRight="@drawable/checkbox_states"/>
+        </FrameLayout>
+
+        <com.ebay.park.views.TextViewDemi
+            android:id="@+id/tv_negociation_chat"
+            style="@style/NotificationConfig.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="37dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/tv_email_item_pending"
+            android:layout_toLeftOf="@+id/tv_negociation_chat_mail"
+            android:text="@string/negotiation_chat"/>
+
+        <com.ebay.park.views.TextViewDemi
+            android:id="@+id/tv_negociation_chat_notifications"
+            style="@style/NotificationConfig.Title.Subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/tv_negociation_chat"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@id/tv_negociation_chat"
+            android:gravity="center_vertical"
+            android:text="@string/notifications"/>
+
+        <com.ebay.park.views.TextViewDemi
+            android:id="@+id/tv_negociation_chat_mail"
+            style="@style/NotificationConfig.Title.Subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/tv_negociation_chat"
+            android:layout_alignLeft="@+id/tv_mypublications_mail"
+            android:layout_alignRight="@+id/tv_mypublications_mail"
+            android:layout_alignTop="@id/tv_negociation_chat"
+            android:gravity="center"
+            android:text="@string/mail"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/LightGreyDivider"
+            android:layout_below="@id/tv_negociation_chat"/>
+
+        <FrameLayout
+            android:id="@+id/email_new_message_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/email_item_pending_layout"
+            android:layout_alignRight="@id/email_item_pending_layout"
+            android:layout_below="@id/tv_negociation_chat_mail"
+            android:layout_marginTop="14dp"
+            android:paddingRight="14dp">
+
+            <CheckBox
+                android:id="@+id/email_new_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:button="@null"
+                android:drawableRight="@drawable/checkbox_states"/>
+
+        </FrameLayout>
+
+        <com.ebay.park.views.TextViewBook
+            android:id="@+id/tv_email_new_message"
+            style="@style/NotificationConfig.Label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_negociation_chat"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:gravity="center_vertical"
+            android:text="@string/notif_config_new_message_rec"/>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/email_new_message_layout"
+            android:layout_alignLeft="@id/push_item_pending_layout"
+            android:layout_alignRight="@id/push_item_pending_layout"
+            android:layout_alignTop="@id/email_new_message_layout"
+            android:paddingRight="13dp">
+
+            <CheckBox
+                android:id="@+id/push_new_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:button="@null"
+                android:drawableRight="@drawable/checkbox_states"/>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/email_offer_accepted_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/email_item_pending_layout"
+            android:layout_alignRight="@id/email_item_pending_layout"
+            android:layout_below="@id/email_new_message_layout"
+            android:layout_marginTop="25dp"
+            android:paddingRight="14dp">
+
+            <CheckBox
+                android:id="@+id/email_offer_accepted"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:button="@null"
+                android:drawableRight="@drawable/checkbox_states"/>
+
+        </FrameLayout>
+
+        <com.ebay.park.views.TextViewBook
+            android:id="@+id/tv_email_offer_accepted"
+            style="@style/NotificationConfig.Label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_email_new_message"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="29dp"
+            android:gravity="center_vertical"
+            android:text="@string/notif_config_offer_accepted"/>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/email_offer_accepted_layout"
+            android:layout_alignLeft="@id/push_item_pending_layout"
+            android:layout_alignRight="@id/push_item_pending_layout"
+            android:layout_alignTop="@id/email_offer_accepted_layout"
+            android:paddingRight="13dp">
+
+            <CheckBox
+                android:id="@+id/push_offer_accepted"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:button="@null"
+                android:drawableRight="@drawable/checkbox_states"/>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/email_offer_rejected_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/email_item_pending_layout"
+            android:layout_alignRight="@id/email_item_pending_layout"
+            android:layout_below="@id/email_offer_accepted_layout"
+            android:layout_marginTop="25dp"
+            android:paddingRight="14dp">
+
+            <CheckBox
+                android:id="@+id/email_offer_rejected"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:button="@null"
+                android:drawableRight="@drawable/checkbox_states"/>
+
+        </FrameLayout>
+
+        <com.ebay.park.views.TextViewBook
+            android:id="@+id/tv_email_offer_rejected"
+            style="@style/NotificationConfig.Label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_email_offer_accepted"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="29dp"
+            android:gravity="center_vertical"
+            android:text="@string/notif_config_offer_accepted"/>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/email_offer_rejected_layout"
+            android:layout_alignLeft="@id/push_item_pending_layout"
+            android:layout_alignRight="@id/push_item_pending_layout"
+            android:layout_alignTop="@id/email_offer_rejected_layout"
+            android:paddingRight="13dp">
+
+            <CheckBox
+                android:id="@+id/push_offer_rejected"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:button="@null"
+                android:drawableRight="@drawable/checkbox_states"/>
+
+        </FrameLayout>
+
+        <com.ebay.park.views.TextViewDemi
+            android:id="@+id/tv_general"
+            style="@style/NotificationConfig.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="37dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/tv_email_offer_rejected"
+            android:layout_toLeftOf="@+id/tv_general_notifications"
+            android:text="@string/general"/>
+
+        <com.ebay.park.views.TextViewDemi
+            android:id="@+id/tv_general_chat_mail"
+            style="@style/NotificationConfig.Title.Subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/tv_general"
+            android:layout_alignLeft="@+id/tv_mypublications_mail"
+            android:layout_alignRight="@+id/tv_mypublications_mail"
+            android:layout_alignTop="@id/tv_general"
+            android:gravity="center"
+            android:text="@string/mail"/>
+
+        <com.ebay.park.views.TextViewDemi
+            android:id="@+id/tv_general_notifications"
+            style="@style/NotificationConfig.Title.Subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/tv_general"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@id/tv_general"
+            android:gravity="center_vertical"
+            android:text="@string/notifications"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/LightGreyDivider"
+            android:layout_below="@id/tv_general"/>
+
+        <FrameLayout
+            android:id="@+id/user_rated_you_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/push_item_pending_layout"
+            android:layout_alignRight="@id/push_item_pending_layout"
+            android:layout_below="@id/tv_general_notifications"
+            android:layout_marginTop="14dp"
+            android:paddingRight="13dp">
+
+            <CheckBox
+                android:id="@+id/push_user_rated_you"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:button="@null"
+                android:drawableRight="@drawable/checkbox_states"/>
+
+        </FrameLayout>
+
+        <com.ebay.park.views.TextViewBook
+            android:id="@+id/tv_user_rated_you"
+            style="@style/NotificationConfig.Label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_general"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:gravity="center_vertical"
+            android:text="@string/notif_config_user_rated_you"/>
+
+        <FrameLayout
+            android:id="@+id/starts_following_you_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/push_item_pending_layout"
+            android:layout_alignRight="@id/push_item_pending_layout"
+            android:layout_below="@id/user_rated_you_layout"
+            android:layout_marginTop="25dp"
+            android:paddingRight="13dp">
+
+            <CheckBox
+                android:id="@+id/push_starts_following_you"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:button="@null"
+                android:drawableRight="@drawable/checkbox_states"/>
+
+        </FrameLayout>
+
+        <com.ebay.park.views.TextViewBook
+            android:id="@+id/tv_starts_following_you"
+            style="@style/NotificationConfig.Label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_user_rated_you"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="29dp"
+            android:gravity="center_vertical"
+            android:text="@string/notif_config_starts_following_you"/>
+
+
+        <FrameLayout
+            android:id="@+id/followed_item_sold_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/push_item_pending_layout"
+            android:layout_alignRight="@id/push_item_pending_layout"
+            android:layout_below="@id/starts_following_you_layout"
+            android:layout_marginTop="25dp"
+            android:paddingRight="13dp">
+
+            <CheckBox
+                android:id="@+id/push_followed_item_sold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:button="@null"
+                android:drawableRight="@drawable/checkbox_states"/>
+
+        </FrameLayout>
+
+        <com.ebay.park.views.TextViewBook
+            android:id="@+id/tv_followed_item_sold"
+            style="@style/NotificationConfig.Label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_starts_following_you"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="29dp"
+            android:gravity="center_vertical"
+            android:text="@string/notif_config_sold_an_item"/>
+
+        <FrameLayout
+            android:id="@+id/interested_item_sold_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/push_item_pending_layout"
+            android:layout_alignRight="@id/push_item_pending_layout"
+            android:layout_below="@id/followed_item_sold_layout"
+            android:layout_marginTop="24dp"
+            android:paddingRight="13dp">
+
+            <CheckBox
+                android:id="@+id/push_interested_item_sold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:button="@null"
+                android:drawableRight="@drawable/checkbox_states"/>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/email_interested_item_sold_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/email_item_pending_layout"
+            android:layout_alignRight="@id/email_item_pending_layout"
+            android:layout_alignBottom="@id/interested_item_sold_layout"
+            android:layout_marginTop="24dp"
+            android:paddingRight="14dp">
+
+            <CheckBox
+                android:id="@+id/email_interested_item_sold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:button="@null"
+                android:drawableRight="@drawable/checkbox_states"/>
+
+        </FrameLayout>
+
+        <com.ebay.park.views.TextViewBook
+            android:id="@+id/tv_interested_item_sold"
+            style="@style/NotificationConfig.Label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_followed_item_sold"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="29dp"
+            android:gravity="center_vertical"
+            android:text="@string/notif_config_sold_an_item"/>
+
+        <FrameLayout
+            android:id="@+id/friend_fb_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/push_item_pending_layout"
+            android:layout_alignRight="@id/push_item_pending_layout"
+            android:layout_below="@id/interested_item_sold_layout"
+            android:layout_marginTop="24dp"
+            android:paddingRight="13dp">
+
+            <CheckBox
+                android:id="@+id/push_friend_fb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:button="@null"
+                android:drawableRight="@drawable/checkbox_states"/>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/email_friend_fb_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/email_item_pending_layout"
+            android:layout_alignRight="@id/email_item_pending_layout"
+            android:layout_below="@id/interested_item_sold_layout"
+            android:layout_marginTop="24dp"
+            android:paddingRight="13dp">
+
+            <CheckBox
+                android:id="@+id/email_friend_fb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:button="@null"
+                android:drawableRight="@drawable/checkbox_states"/>
+
+        </FrameLayout>
+
+        <com.ebay.park.views.TextViewBook
+            android:id="@+id/tv_friend_fb"
+            style="@style/NotificationConfig.Label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_interested_item_sold"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="29dp"
+            android:gravity="center_vertical"
+            android:text="@string/notif_config_fb_friend"/>
+
+    </RelativeLayout>
+
+
+</ScrollView>

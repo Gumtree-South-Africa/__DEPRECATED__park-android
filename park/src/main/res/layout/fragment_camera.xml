@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/title_gray">
+
+    <SurfaceView
+        android:id="@+id/sv_camera_preview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/fl_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/title_gray">
+
+            <ImageView
+                android:id="@+id/iv_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:padding="10dp"
+                android:src="@drawable/icon_white_back" />
+
+            <com.ebay.park.views.TextViewDemi
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/camera_feature_button_size"
+                android:textColor="@color/White"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:layout_marginLeft="50dp"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_marginRight="25dp"
+                android:text="@string/add_image"/>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:id="@+id/ly_complete"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/iv_complete_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/check_icon_big"
+                    android:layout_gravity="center_horizontal|bottom"/>
+
+                <com.ebay.park.views.TextViewDemi
+                    android:id="@+id/tv_complete_hint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/incredible"
+                    android:textColor="@color/White"
+                    android:gravity="center"
+                    android:layout_marginTop="25dp"
+                    android:layout_gravity="center_horizontal"
+                    android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+                <com.ebay.park.views.TextViewBook
+                    android:id="@+id/tv_complete_instruction"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/White"
+                    android:gravity="center"
+                    android:layout_marginTop="30dp"
+                    android:layout_gravity="center_horizontal"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/camera_photos_hint"/>
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/preview_placeholder"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <ImageView
+                android:id="@+id/btn_switch_camera"
+                android:layout_width="58dp"
+                android:layout_height="40dp"
+                android:layout_gravity="bottom|left"
+                android:layout_margin="10dp"
+                android:src="@drawable/switch_camera_icon"
+                android:visibility="gone"/>
+
+            <com.ebay.park.views.TextViewBook
+                android:id="@+id/tv_dialog_hint"
+                android:layout_width="205dp"
+                android:layout_height="95dp"
+                android:background="@drawable/bg_camera_feedback"
+                android:gravity="center"
+                android:textColor="@color/White"
+                android:layout_gravity="bottom|center_horizontal"
+                android:paddingTop="5dp"
+                android:paddingBottom="15dp"
+                android:visibility="gone"/>
+
+            <ImageView
+                android:id="@+id/btn_flash_mode"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="bottom|right"
+                android:layout_margin="10dp"
+                android:src="@drawable/flash_mode_icon_auto"
+                android:visibility="visible"/>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/title_gray">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+
+                <FrameLayout
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="0dp"
+                    android:layout_height="76dp"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/cam_image_thumb_empty"
+                        android:id="@+id/iv_photo_1"/>
+
+                    <ImageView
+                        android:id="@+id/iv_edit_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@id/iv_photo_1"
+                        android:src="@drawable/icon_edit_round"
+                        android:layout_gravity="bottom|right"
+                        android:visibility="gone"/>
+
+                    <ImageView
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/mask_cam_image_thumb_main"
+                        android:id="@+id/iv_photo_1_mask"/>
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="0dp"
+                    android:layout_height="76dp"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/cam_image_thumb_empty"
+                        android:id="@+id/iv_photo_2"/>
+
+                    <ImageView
+                        android:id="@+id/iv_edit_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@id/iv_photo_1"
+                        android:src="@drawable/icon_edit_round"
+                        android:layout_gravity="bottom|right"
+                        android:visibility="gone"/>
+
+                    <ImageView
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/mask_cam_image_stroke_selected_full"
+                        android:id="@+id/iv_photo_2_mask"/>
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="0dp"
+                    android:layout_height="76dp"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/cam_image_thumb_empty"
+                        android:id="@+id/iv_photo_3"/>
+
+                    <ImageView
+                        android:id="@+id/iv_edit_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@id/iv_photo_1"
+                        android:src="@drawable/icon_edit_round"
+                        android:layout_gravity="bottom|right"
+                        android:visibility="gone"/>
+
+                    <ImageView
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/mask_cam_image_stroke_selected_full"
+                        android:id="@+id/iv_photo_3_mask"/>
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="0dp"
+                    android:layout_height="76dp"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/cam_image_thumb_empty"
+                        android:id="@+id/iv_photo_4"/>
+
+                    <ImageView
+                        android:id="@+id/iv_edit_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@id/iv_photo_1"
+                        android:src="@drawable/icon_edit_round"
+                        android:layout_gravity="bottom|right"
+                        android:visibility="gone"/>
+
+                    <ImageView
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/mask_cam_image_stroke_selected_full"
+                        android:id="@+id/iv_photo_4_mask"/>
+                </FrameLayout>
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/title_gray"
+            android:padding="5dp">
+
+            <ImageView
+                android:id="@+id/btn_gallery"
+                android:layout_width="48dp"
+                android:layout_height="@dimen/camera_feature_button_size"
+                android:layout_gravity="left|center_vertical"
+                android:layout_marginLeft="35dp"
+                android:padding="5dp"
+                android:src="@drawable/gallery_icon"/>
+
+            <ImageView
+                android:id="@+id/btn_shutter_camera"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="8dp"
+                android:src="@drawable/shutter_camera_selector"/>
+
+            <com.ebay.park.views.TextViewBook
+                android:id="@+id/tv_next_step"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/camera_feature_button_size"
+                android:textColor="@color/White"
+                android:layout_gravity="right|center_vertical"
+                android:gravity="center"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_marginRight="25dp"
+                android:visibility="gone"
+                android:text="@string/next_step"/>
+
+        </FrameLayout>
+
+    </LinearLayout>
+</FrameLayout>

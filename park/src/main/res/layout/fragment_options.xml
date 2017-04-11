@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:id="@+id/options_main_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/White">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.ebay.park.views.TextViewDemi
+            android:id="@+id/tv_sotial"
+            style="@style/NotificationConfig.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:paddingTop="20dp"
+            android:text="@string/social"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/LightGreyDivider"
+            android:layout_below="@id/tv_sotial"/>
+
+        <com.ebay.park.views.TextViewBook
+            android:id="@+id/tv_find_fb_friends"
+            style="@style/NotificationConfig.Label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_sotial"
+            android:paddingLeft="16dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:gravity="center_vertical"
+            android:drawableRight="@drawable/logo_fb_share"
+            android:paddingRight="10dp"
+            android:text="@string/find_your_fb_friends"/>
+
+        <com.ebay.park.views.TextViewBook
+            android:id="@+id/tv_invite_my_friends"
+            style="@style/NotificationConfig.Label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_find_fb_friends"
+            android:paddingLeft="16dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:gravity="center_vertical"
+            android:text="@string/invite_my_friends"/>
+
+        <com.ebay.park.views.TextViewDemi
+            android:id="@+id/tv_account"
+            style="@style/NotificationConfig.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="21dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/tv_invite_my_friends"
+            android:text="@string/account"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/LightGreyDivider"
+            android:layout_below="@id/tv_account"/>
+
+        <com.ebay.park.views.TextViewBook
+            android:id="@+id/tv_edit_profile"
+            style="@style/NotificationConfig.Label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_account"
+            android:paddingTop="16dp"
+            android:paddingLeft="16dp"
+            android:paddingBottom="15dp"
+            android:gravity="center_vertical"
+            android:text="@string/edit_profile"/>
+
+        <com.ebay.park.views.TextViewBook
+            android:id="@+id/tv_change_pass"
+            style="@style/NotificationConfig.Label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_edit_profile"
+            android:paddingLeft="16dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="16dp"
+            android:gravity="center_vertical"
+            android:textColor="@color/toggle_enable_selector"
+            android:text="@string/change_password"/>
+
+
+        <com.ebay.park.views.TextViewDemi
+            android:id="@+id/tv_config"
+            style="@style/NotificationConfig.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="21dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/tv_change_pass"
+            android:text="@string/configuration"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/LightGreyDivider"
+            android:layout_below="@id/tv_config"/>
+
+        <com.ebay.park.views.TextViewBook
+            android:id="@+id/tv_linked_accounts"
+            style="@style/NotificationConfig.Label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_config"
+            android:paddingLeft="16dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="15dp"
+            android:gravity="center_vertical"
+            android:text="@string/linked_accounts"/>
+
+        <com.ebay.park.views.TextViewBook
+            android:id="@+id/tv_push_notifications"
+            style="@style/NotificationConfig.Label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_linked_accounts"
+            android:paddingLeft="16dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="16dp"
+            android:gravity="center_vertical"
+            android:text="@string/notifications_push_config"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:background="@color/DarkGrayDrawer"
+            android:layout_below="@id/tv_push_notifications">
+
+            <com.ebay.park.views.TextViewBook
+                android:id="@+id/tv_terms_conditions"
+                style="@style/NotificationConfig.Label.White"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_alignParentTop="true"
+                android:paddingLeft="16dp"
+                android:gravity="center_vertical"
+                android:text="@string/terms_conditions"/>
+
+            <View
+                android:id="@+id/divider_terms"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/DarkGrayDividerProfile"
+                android:layout_below="@id/tv_terms_conditions"/>
+
+            <com.ebay.park.views.TextViewBook
+                android:id="@+id/tv_about_viva"
+                style="@style/NotificationConfig.Label.White"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_below="@id/divider_terms"
+                android:paddingLeft="16dp"
+                android:gravity="center_vertical"
+                android:text="@string/about"/>
+
+            <View
+                android:id="@+id/divider_about"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/DarkGrayDividerProfile"
+                android:layout_below="@id/tv_about_viva"/>
+
+            <com.ebay.park.views.TextViewDemi
+                android:id="@+id/tv_logout"
+                style="@style/NotificationConfig.Label.White"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_below="@id/divider_about"
+                android:paddingLeft="16dp"
+                android:gravity="center_vertical"
+                android:text="@string/logout"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignBottom="@id/tv_logout"
+                android:layout_marginBottom="12dp"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/icon_logout"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</ScrollView>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/list_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/GrayBackground"
+    android:orientation="vertical" >
+
+    <ListView
+        android:id="@+id/chat_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@color/GrayBackground"
+        android:dividerHeight="4dp"
+        android:layout_margin="6dp"
+        android:orientation="vertical" />
+    
+    <include 
+        layout="@layout/empty_view"/>
+
+</LinearLayout>

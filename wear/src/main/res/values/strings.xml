@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Vivanuncios</string>
+    <string name="hello_world">Hello World!</string>
+    <string name="title_activity_list_items">ListItemsActivity</string>
+    <string name="title_activity_rect_activity_list_items">RectActivityListItems</string>
+    <string name="search">Buscar</string>
+    <string name="near">Cercanos</string>
+    <string name="title_activity_items">ItemsActivity</string>
+    <string name="price">$ %s</string>
+    <string name="title_activity_map">Map</string>
+    <string name="title_activity_image">ImageActivity</string>
+    <string name="hello_round">Hello Round World!</string>
+    <string name="hello_square">Hello Square World!</string>
+    <string name="sync_error">Ocurrió un error al sincronizar con el dispositivo</string>
+    <string name="no_network_error">El dispositivo no posee conexión a internet</string>
+    <string name="network_error">Ocurrió un error al conectarse a la red</string>
+    <string name="permission_error">Se requieren permisos a Google Play Services</string>
+    <string name="general_error">Ha ocurrido un error inesperado</string>
+    <string name="like_session_error">Inicia sesión para continuar</string>
+    <string name="no_items_search_message">¡Vaya! No hay ítems que respondan a tu búsqueda</string>
+    <string name="no_items_search_hint">Deberías cambiar los parámetros de búsqueda e intentar nuevamente</string>
+    <string name="no_bluetooth_connection">Asegúrate de tener el bluetooth activado</string>
+</resources>

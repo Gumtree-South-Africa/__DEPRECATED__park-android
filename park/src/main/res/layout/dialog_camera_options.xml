@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ly_set_principal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:src="@drawable/menu_icon_star" />
+
+        <com.ebay.park.views.TextViewBook
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="6"
+            android:gravity="left|center_vertical"
+            android:text="@string/camera_set_principal"
+            android:textColor="@color/system_notification" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ly_crop"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:src="@drawable/menu_icon_crop" />
+
+        <com.ebay.park.views.TextViewBook
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="6"
+            android:gravity="left|center_vertical"
+            android:text="@string/camera_crop"
+            android:textColor="@color/system_notification" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ly_delete"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:src="@drawable/menu_icon_trash" />
+
+        <com.ebay.park.views.TextViewBook
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="6"
+            android:gravity="left|center_vertical"
+            android:text="@string/camera_delete"
+            android:textColor="@color/system_notification" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="215dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/GrayBackground" />
+
+    <com.ebay.park.views.TextViewBook
+        android:id="@+id/tv_option_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="15dp"
+        android:text="@string/cancel"
+        android:textColor="@color/feed_filter_grey" />
+
+</LinearLayout>

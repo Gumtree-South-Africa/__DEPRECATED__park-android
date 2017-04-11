@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <dimen name="item_detail_image_height">363dp</dimen>
+    <color name="item_detail_category_label_text_color">@color/White</color>
+    <dimen name="item_detail_field_horizontal_separation">16dp</dimen>
+    <dimen name="item_detail_field_vertical_separation">12dp</dimen>
+    <dimen name="item_detail_owner_image_width">50dp</dimen>
+    <dimen name="item_detail_owner_image_height">50dp</dimen>
+    <dimen name="item_detail_field_horizontal_separation_right">10dp</dimen>
+
+    <dimen name="item_image_height">110dp</dimen>
+    <dimen name="item_field_horizontal_separation">5dp</dimen>
+    <dimen name="item_field_vertical_separation">5dp</dimen>
+    <dimen name="item_fields_bottom_separation">5dp</dimen>
+    <color name="item_username_text_color">@color/NewOrange</color>
+    <color name="item_name_text_color">@color/new_light_gray</color>
+    <color name="item_field_text_color">@color/LightGray</color>
+
+    <style name="item_field">
+        <item name="android:paddingTop">@dimen/item_field_vertical_separation</item>
+        <item name="android:paddingLeft">@dimen/item_field_horizontal_separation</item>
+        <item name="android:paddingRight">@dimen/item_field_horizontal_separation</item>
+    </style>
+
+    <style name="item_field.username">
+        <item name="android:textColor">@color/item_username_text_color</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="item_field.values">
+        <item name="android:paddingBottom">@dimen/item_field_vertical_separation</item>
+    </style>
+
+    <style name="item_values">
+        <item name="android:textColor">@color/item_field_text_color</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <style name="item_price">
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">@color/DarkGrayDrawer</item>
+    </style>
+
+    <style name="item_price_detail">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/DarkGrayDrawer</item>
+    </style>
+
+</resources>

@@ -1,0 +1,429 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+         Base application theme, dependent on API level. This theme is replaced 
+		by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+
+    <style name="AppBaseTheme" parent="@style/Theme.AppCompat.Light">
+        <!--
+             Theme customizations available in newer API levels can go in res/values-vXX/styles.xml, 
+			while customizations related to backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <item name="android:actionBarTabStyle">@style/ParkActionBarTabs</item>
+        <item name="android:actionBarStyle">@style/ParkActionBar</item>
+        <item name="actionBarStyle">@style/ParkActionBar</item>
+        <item name="android:actionBarTabTextStyle">@style/ParkActionBarTabsText</item>
+        <item name="android:actionMenuTextAppearance">@style/ParkActionBar.MenuTextStyle</item>
+        <item name="android:actionMenuTextColor">@color/White</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="actionMenuTextColor">@color/White</item>
+        <item name="android:spinnerDropDownItemStyle">@style/SpinnerItemStyle</item>
+        <item name="android:popupMenuStyle">@style/ParkPopupMenu</item>
+        <item name="android:textAppearanceLargePopupMenu">@style/PopupMenuTextAppearance</item>
+        <item name="actionBarDivider">@null</item>
+        <item name="android:actionBarDivider">@null</item>
+        <item name="colorAccent">@color/accent</item>
+        <item name="drawerArrowStyle">@style/VivaDrawerArrowToggle</item>
+        <item name="colorControlNormal">@color/GrayBackground</item>
+        <item name="homeAsUpIndicator">@drawable/icon_white_back</item>
+        <item name="actionOverflowButtonStyle">@style/ButtonOverflow</item>
+        <item name="actionButtonStyle">@style/ActionButton</item>
+        <item name="textAppearanceLargePopupMenu">@style/PopupMenuTextAppearanceLarge</item>
+        <item name="textAppearanceSmallPopupMenu">@style/PopupMenuTextAppearanceSmall</item>
+    </style>
+
+    <style name="PopupMenuTextAppearanceSmall" parent="Base.TextAppearance.AppCompat.Widget.PopupMenu.Small">
+        <item name="android:textColor">@color/text_cancel_negotiation_selector</item>
+        <item name="android:textSize">11sp</item>
+    </style>
+
+    <style name="PopupMenuTextAppearanceLarge" parent="Base.TextAppearance.AppCompat.Widget.PopupMenu.Small">
+        <item name="android:textColor">@color/text_cancel_negotiation_selector</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="ButtonOverflow" parent="android:style/Widget.Holo.Light.ActionButton.Overflow">
+        <item name="android:src">@drawable/btn_menu_icon</item>
+    </style>
+
+    <style name="ActionButton" parent="Widget.AppCompat.ActionButton">
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="VivaDrawerArrowToggle" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="color">@color/White</item>
+    </style>
+
+    <style name="PopupMenuTextAppearance" parent="android:TextAppearance.Large">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="LeftTabsTheme" parent="AppTheme">
+        <item name="android:actionBarTabStyle">@style/ParkActionBarTabsLeft</item>
+    </style>
+
+    <style name="ParkActionBar.MenuTextStyle" parent="android:style/TextAppearance.Holo.Widget.ActionBar.Title">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/White</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="ParkPopupMenu" parent="@style/Widget.AppCompat.ListPopupWindow">
+        <item name="android:popupBackground">@color/White</item>
+    </style>
+
+    <style name="ParkActionBarTabs" parent="@style/Widget.AppCompat.Light.ActionBar.TabBar">
+        <item name="android:background">@drawable/action_bar_tab_indicator_white</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="ParkActionBarTabsLeft" parent="@style/Widget.AppCompat.Light.ActionBar.TabBar">
+        <item name="android:background">@drawable/action_bar_tab_indicator</item>
+        <item name="android:paddingLeft">15dp</item>
+        <item name="android:gravity">left</item>
+    </style>
+
+    <style name="ParkActionBarTabsText" parent="@style/Widget.AppCompat.Light.ActionBar.TabText">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/tab_text_color_selector</item>
+    </style>
+
+    <style name="ParkActionBar" parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+        <item name="android:titleTextStyle">@style/ParkActionBarTitle</item>
+        <item name="titleTextStyle">@style/ParkActionBarTitle</item>
+        <item name="android:background">@color/VivaTurquoise</item>
+        <item name="background">@color/VivaTurquoise</item>
+    </style>
+
+    <style name="ParkActionBarTitle" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/White</item>
+    </style>
+
+    <style name="SpinnerItemStyle" parent="@android:style/Widget.Holo.DropDownItem.Spinner">
+        <item name="android:textColor">@color/system_notification</item>
+    </style>
+
+    <style name="Button" parent="@android:style/Widget.Button">
+        <item name="android:textColor">@color/login_txt_selector</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:background">@drawable/offer_btn_selector</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="LoginButton" parent="@android:style/Widget.Button">
+        <item name="android:textColor">@color/login_txt_selector</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:background">@drawable/login_button_selector</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="RateButton" parent="LoginButton">
+        <item name="android:textSize">11sp</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="Button.Facebook2" parent="@style/Button">
+        <item name="android:textColor">@color/facebook_button_txt_selector</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:drawableLeft">@drawable/logo_facebook</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:background">@drawable/facebook_button</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="Button.Facebook3" parent="@android:style/Widget.Button">
+        <item name="android:textColor">@color/system_notification</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:drawableLeft">@drawable/logo_accounts_fb_blue</item>
+        <item name="android:paddingLeft">13dp</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:drawablePadding">42dp</item>
+        <item name="android:gravity">left|center_vertical</item>
+    </style>
+
+    <style name="Button.Twitter" parent="@style/Button">
+        <item name="android:textColor">#FFFFFFFF</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:drawableLeft">@drawable/tw_link</item>
+        <item name="android:paddingLeft">30dp</item>
+        <item name="android:background">@drawable/twitter_button</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="Button.Follow" parent="@style/Button">
+        <item name="android:textColor">@color/follow_btn_text_color_selector</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:background">@drawable/follow_btn_selector</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">6dp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="Button.Register" parent="@style/Button">
+        <item name="android:textColor">@color/VivaDarkBlue</item>
+        <item name="android:background">@drawable/btn_register</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="Button.Follow.Remove" parent="@style/Button.Follow">
+        <item name="android:textColor">@color/txt_remove_follower_selector</item>
+        <item name="android:background">@drawable/follow_remove_btn_selector</item>
+        <item name="android:padding">0dp</item>
+    </style>
+
+    <style name="Button.Follow.Remove.Group" parent="@style/Button.Follow">
+        <item name="android:textColor">@color/txt_remove_follower_selector</item>
+        <item name="android:background">@drawable/follow_remove_btn_selector</item>
+        <item name="android:padding">2dp</item>
+        <item name="android:textSize">11sp</item>
+    </style>
+
+    <style name="Button.Follow.Group" parent="@style/Button.Follow">
+        <item name="android:padding">0dp</item>
+    </style>
+
+    <style name="Button.Chat" parent="@style/Button">
+        <item name="android:padding">4dp</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/White</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="ErrorView" parent="@android:style/Widget.TextView">
+        <item name="android:background">@drawable/error_background</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">#a94442</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="SuccessView" parent="@android:style/Widget.TextView">
+        <item name="android:background">@drawable/success_background</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">#3c763d</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="Label" parent="@android:style/Widget.TextView">
+        <item name="android:textColor">@color/NewOrange</item>
+    </style>
+
+    <style name="Label.Small" parent="Label">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="Label.Black" parent="@android:style/Widget.TextView">
+        <item name="android:textColor">@color/system_notification</item>
+    </style>
+
+    <style name="Label.Black.Medium.Small" parent="Label.Black">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="Label.Small.LightGray" parent="Label.Small">
+        <item name="android:textColor">@color/feed_filter_grey</item>
+    </style>
+
+    <style name="Label.Black.Small" parent="Label.Black">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="Label.DarkGray" parent="@android:style/Widget.TextView">
+        <item name="android:textColor">@color/system_notification</item>
+    </style>
+
+    <style name="Label.DarkGray.Medium" parent="Label.DarkGray">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Label.MediumGray" parent="@android:style/Widget.TextView">
+        <item name="android:textColor">@color/title_gray</item>
+    </style>
+
+    <style name="Label.Error" parent="@android:style/Widget.TextView">
+        <item name="android:textColor">@color/IndicatorOrange</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <style name="Label.Error.Medium" parent="Label.Error">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="Label.Error.Small" parent="Label.Error">
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <style name="Label.MediumGray.MediumSmall">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="Label.MediumGray.Small">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="Label.Gray" parent="@android:style/Widget.TextView">
+        <item name="android:textColor">@color/feed_filter_grey</item>
+    </style>
+
+    <style name="Label.Gray.SmallMedium">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="Label.Gray.Small">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="Label.Title" parent="@android:style/Widget.TextView">
+        <item name="android:textColor">@color/title_gray</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="Label.Title.Group" parent="@android:style/Widget.TextView">
+        <item name="android:textColor">@color/DarkGrayDrawer</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="Label.Description.Group" parent="@android:style/Widget.TextView">
+        <item name="android:textColor">@color/system_notification</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:lineSpacingMultiplier">1.1</item>
+    </style>
+
+    <style name="Label.Location.Group" parent="Label.Description.Group">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="Label.Suscribers.Group" parent="@android:style/Widget.TextView">
+        <item name="android:textColor">@color/White</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="Label.Admin.Group" parent="Label.Suscribers.Group">
+        <item name="android:textSize">11sp</item>
+    </style>
+
+    <style name="Label.Admin.Group.Name" parent="Label.Suscribers.Group">
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <style name="Label.Counters.Group" parent="Label.Description.Group">
+        <item name="android:textColor">@color/LightGray</item>
+    </style>
+
+    <style name="Label.Username" parent="@android:style/Widget.TextView">
+        <item name="android:textColor">@color/system_notification</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="Label.User.Email" parent="Label.Username">
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <style name="BlueLabel" parent="@android:style/Widget.TextView">
+        <item name="android:textColor">@color/blue_title_color_selector</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="BlueLabel.Small">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="VivaBlueLabel" parent="@android:style/Widget.TextView">
+        <item name="android:textColor">@color/VivaLightBlue</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="VivaBlueLabel.Small" parent="VivaBlueLabel">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="CustomInput" parent="@android:style/Widget.EditText">
+        <item name="android:textColor">@color/system_notification</item>
+        <item name="android:textColorHint">@color/feed_filter_grey</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:gravity">left|center_vertical</item>
+        <item name="colorControlNormal">@color/GrayBackground</item>
+    </style>
+
+    <style name="CustomInput.Chat" parent="CustomInput">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/DarkGrayDrawer</item>
+    </style>
+
+    <style name="CustomInput.Register" parent="CustomInput">
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="CustomInput.GroupForm" parent="CustomInput">
+        <item name="android:textSize">13sp</item>
+        <item name="android:layout_marginLeft">9dp</item>
+        <item name="android:layout_marginRight">9dp</item>
+        <item name="android:gravity">left|center_vertical</item>
+    </style>
+
+    <style name="Widget.TextView.ListSeparator" parent="@android:style/Widget.TextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">8sp</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="NotificationConfig">
+        <item name="android:textColor">@color/system_notification</item>
+    </style>
+
+    <style name="NotificationConfig.Title">
+        <item name="android:textSize">13sp</item>
+        <item name="android:paddingBottom">7dp</item>
+        <item name="android:paddingLeft">15dp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/VivaTurquoise</item>
+    </style>
+
+    <style name="NotificationConfig.Title.Subtitle">
+        <item name="android:textSize">10sp</item>
+        <item name="android:paddingLeft">0dp</item>
+        <item name="android:paddingRight">15dp</item>
+        <item name="android:textColor">@color/system_notification</item>
+    </style>
+
+    <style name="NotificationConfig.Label">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="NotificationConfig.Label.White">
+        <item name="android:textColor">@color/White</item>
+    </style>
+
+    <style name="ActivityThemeNoTranslucent" parent="AppTheme">
+    </style>
+
+    <style name="LoginThemePark" parent="Theme.AccountKit">
+        <item name="com_accountkit_primary_color">@color/VivaTurquoise</item>
+        <item name="com_accountkit_primary_text_color">@android:color/white</item>
+        <item name="com_accountkit_secondary_text_color">#44566b</item>
+        <item name="com_accountkit_status_bar_color">@color/VivaTurquoiseDark</item>
+        <item name="com_accountkit_button_background_color">@color/IndicatorOrange</item>
+        <item name="com_accountkit_icon_color">@color/VivaLightBlue</item>
+
+
+        <item name="com_accountkit_input_accent_color">?attr/com_accountkit_primary_color</item>
+    </style>
+
+</resources>

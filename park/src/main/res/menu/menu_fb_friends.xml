@@ -1,0 +1,10 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" >
+
+    <item
+        android:id="@+id/action_fb_invite"
+        android:icon="@drawable/icon_white_fb_invite"
+        android:title="@string/invite_fb_friends"
+        app:showAsAction="always"/>
+
+</menu>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="padding_top_tabstrip">9dp</dimen>
+    <dimen name="padding_left_tabstrip">12dp</dimen>
+    <dimen name="padding_right_tabstrip">12dp</dimen>
+    <dimen name="padding_bottom_tabstrip">9dp</dimen>
+
+    <dimen name="padding_top_spinner">9dp</dimen>
+    <dimen name="padding_left_spinner">14dp</dimen>
+    <dimen name="padding_right_spinner">12dp</dimen>
+    <dimen name="padding_bottom_spinner">9dp</dimen>
+    <dimen name="padding_last_bottom_spinner">18dp</dimen>
+    <dimen name="padding_first_top_spinner">18dp</dimen>
+</resources>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/White"
+            android:fillViewport="true">
+
+    <RelativeLayout
+        android:id="@+id/login_controls"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <com.ebay.park.views.FbButtonLinkedAccount
+            android:id="@+id/btn_fb_login"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:paddingTop="13dp"
+            android:elevation="0dp"
+            android:paddingBottom="13dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            style="@style/Button.Facebook3"/>
+
+        <com.ebay.park.views.TextViewBook
+            android:id="@+id/tv_facebook_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/feed_filter_grey"
+            android:layout_alignParentRight="true"
+            android:paddingRight="15dp"
+            android:paddingTop="17dp"
+            android:visibility="gone"
+            android:textSize="11sp"/>
+
+        <View
+            android:id="@+id/fb_divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/btn_fb_login"
+            android:background="@color/LightGreyDivider"/>
+
+        <com.ebay.park.views.TextViewBook
+            android:id="@+id/tv_tw_login"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:drawableLeft="@drawable/logo_accounts_twitter_blue"
+            android:drawablePadding="10dp"
+            android:text="@string/twitter"
+            android:textSize="12sp"
+            android:paddingBottom="13dp"
+            android:paddingTop="13dp"
+            android:paddingLeft="13dp"
+            android:gravity="left|center_vertical"
+            android:layout_below="@id/fb_divider"/>
+
+        <com.ebay.park.views.TextViewBook
+            android:id="@+id/tv_twitter_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/feed_filter_grey"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@id/tv_tw_login"
+            android:paddingRight="15dp"
+            android:paddingTop="16dp"
+            android:visibility="gone"
+            android:textSize="11sp"/>
+
+        <View
+            android:id="@+id/tw_divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/tv_tw_login"
+            android:background="@color/LightGreyDivider"/>
+    </RelativeLayout>
+
+</ScrollView>

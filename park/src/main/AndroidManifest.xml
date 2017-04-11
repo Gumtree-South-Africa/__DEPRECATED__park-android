@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="com.ebay.park"
+          xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="com.ebay.park.permission.C2D_MESSAGE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+
+    <uses-feature android:name="android.hardware.camera"/>
+
+    <permission
+        android:name="com.ebay.park.permission.C2D_MESSAGE"
+        android:protectionLevel="signature"/>
+
+
+    <application
+        android:name=".ParkApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version"/>
+
+        <receiver
+            android:name=".notifications.NotificationBroadcastReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+                <category android:name="com.ebay.park"/>
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".activities.SplashActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <data android:scheme="@string/branch_io_scheme" android:host="open" />
+                <!--<data android:scheme="https" android:host="xbuj.test-app.link" />-->
+                <!--<data android:scheme="https" android:host="bnc.lt" android:pathPrefix="/8r6c" />-->
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.ParkActivity"
+            android:label="@string/app_name">
+        </activity>
+        <activity
+            android:name=".activities.ItemDetailActivity"
+            android:label="@string/details"
+            android:theme="@style/ActivityThemeNoTranslucent"
+            android:windowSoftInputMode="adjustResize|stateHidden">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ebay.park.activities.ParkActivity"/>
+        </activity>
+        <activity
+            android:name=".activities.GroupDetailActivity"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH"/>
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ebay.park.activities.ParkActivity"/>
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/global_search"
+                android:value="com.ebay.park.activities.GroupDetailActivity"/>
+        </activity>
+        <activity
+            android:name=".activities.ProfileActivity"
+            android:label="@string/profile"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH"/>
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ebay.park.activities.ParkActivity"/>
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/global_search"
+                android:value="com.ebay.park.activities.ProfileActivity"/>
+        </activity>
+        <activity
+            android:name=".activities.LoginActivity"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustPan">
+        </activity>
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+
+        <service
+            android:name="com.globant.roboneck.common.NeckService"
+            android:exported="false"/>
+
+        <activity
+            android:name=".activities.ItemCreateEditActivity"
+            android:label="@string/title_publish"
+            android:windowSoftInputMode="adjustPan">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ebay.park.activities.ParkActivity"/>
+        </activity>
+        <activity
+            android:name=".activities.UserGroupsActivity"
+            android:label="@string/title_user_groups">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ebay.park.activities.ItemCreateEditActivity"/>
+        </activity>
+        <activity
+            android:name=".activities.RateListActivity"
+            android:label="@string/title_activity_my_ratelist"
+            android:theme="@style/ActivityThemeNoTranslucent"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ebay.park.activities.ProfileActivity"/>
+        </activity>
+        <activity
+            android:name=".activities.ChatActivity"
+            android:theme="@style/ActivityThemeNoTranslucent"
+            android:windowSoftInputMode="adjustResize|stateHidden">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ebay.park.activities.ParkActivity"/>
+        </activity>
+        <activity
+            android:name=".activities.GroupCreateActivity"
+            android:windowSoftInputMode="adjustPan">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ebay.park.activities.ParkActivity"/>
+        </activity>
+        <activity android:name=".activities.GroupItemsEditActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ebay.park.activities.ParkActivity"/>
+        </activity>
+        <activity android:name=".activities.GroupFollowersEditActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ebay.park.activities.ParkActivity"/>
+        </activity>
+        <activity
+            android:name=".activities.GlobalSearchActivity"
+            android:label="@string/global_search"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH"/>
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ebay.park.activities.ParkActivity"/>
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/global_search"
+                android:value="com.ebay.park.activities.GlobalSearchActivity"/>
+        </activity>
+        <activity
+            android:name=".activities.SocialNetworksActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <data
+                    android:host="t4jsample"
+                    android:scheme="oauth"/>
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ebay.park.activities.ProfileActivity"/>
+        </activity>
+
+        <meta-data
+            android:name="com.crashlytics.ApiKey"
+            android:value="8089bc6300a14dc0b0cb0ed9bcd9799041513219"/>
+
+        <activity
+            android:name=".activities.FilterActivity"
+            android:label="@string/title_activity_filter"
+            android:windowSoftInputMode="stateHidden">
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyCEzUpYn5k3JrUrm8pMa-aSGQBF3u1NIwI"/>
+
+        <activity
+            android:name=".activities.MapActivity"
+            android:label="@string/title_activity_map">
+        </activity>
+        <activity
+            android:name=".activities.CameraActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize">
+        </activity>
+        <activity android:name="eu.janmuller.android.simplecropimage.CropImage"/>
+        <activity
+            android:name=".activities.ItemPublishedActivity"
+            android:label="@string/title_activity_item_published">
+        </activity>
+        <activity android:name=".activities.OptionsActivity">
+        </activity>
+
+        <activity
+            android:name=".activities.FindFbFriendsActivity"
+            android:label="@string/find_your_fb_friends_title">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ebay.park.activities.OptionsActivity"/>
+        </activity>
+
+        <!-- Configure the aspect of the UI -->
+        <meta-data android:name="SWRVE_PUSH_ICON"
+                   android:resource="@drawable/ic_launcher"/>
+        <meta-data android:name="SWRVE_PUSH_ICON_MATERIAL"
+                   android:resource="@drawable/viva_app_icon_lollipop"/>
+        <meta-data android:name="SWRVE_PUSH_ICON_LARGE"
+                   android:resource="@drawable/ic_launcher" />
+        <meta-data android:name="SWRVE_PUSH_ACCENT_COLOR"
+                   android:resource="@color/VivaTurquoise" />
+        <meta-data android:name="SWRVE_PUSH_ACTIVITY"
+                   android:value=".activities.ParkActivity"/>
+        <meta-data android:name="SWRVE_PUSH_TITLE"
+                   android:value="@string/app_name"/>
+
+        <service android:name="com.ebay.park.notifications.SwrveCustomGcmIntentService">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </service>
+
+        <meta-data android:name="com.facebook.sdk.ApplicationId"
+                   android:value="@string/app_id"/>
+        <meta-data android:name="com.facebook.accountkit.ClientToken"
+                   android:value="@string/ACCOUNT_KIT_CLIENT_TOKEN" />
+        <meta-data android:name="com.facebook.accountkit.ApplicationName"
+                   android:value="@string/app_name" />
+
+        <activity android:name="com.facebook.accountkit.ui.AccountKitActivity"
+                  android:theme="@style/LoginThemePark"
+                  tools:replace="android:theme">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="@string/ak_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+
+        <meta-data android:name="io.branch.sdk.BranchKey" android:value="key_live_bojrRUTjRU3H3J9AhHwi7mlbwsaabeQx" />
+        <meta-data android:name="io.branch.sdk.BranchKey.test" android:value="key_test_ghdvQJUkJJ1G4QYBpJsaMfnozqggliVm" />
+
+        <receiver android:name="io.branch.referral.InstallListener" android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name=".services.WearCallListenerService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.android.gms.wearable.DATA_CHANGED" />
+                <action android:name="com.google.android.gms.wearable.MESSAGE_RECEIVED" />
+                <data android:scheme="wear" android:host="*"  />
+            </intent-filter>
+        </service>
+
+    </application>
+
+</manifest>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/White" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:descendantFocusability="beforeDescendants"
+        android:focusableInTouchMode="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <com.ebay.park.views.TextViewDemi
+                android:id="@+id/tv_header3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:paddingLeft="5dp"
+                android:text="@string/max_distance"
+                android:textColor="@color/system_notification" />
+
+            <com.ebay.park.views.TextViewBook
+                style="@style/Label.MediumGray.MediumSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/max_distance"
+                android:paddingLeft="10dp"
+                android:paddingRight="2dp"
+                android:text="@string/number_of_miles"
+                android:textColor="@color/VivaTurquoise" />
+
+            <com.ebay.park.views.EditTextBook
+                android:id="@+id/max_distance"
+                style="@style/Label.MediumGray.MediumSmall"
+                android:layout_width="80dp"
+                android:textSize="13dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:gravity="center_horizontal"
+                android:hint="@string/no_limit"
+                android:inputType="numberDecimal"
+                android:maxLength="6"
+                android:textColorHint="@color/title_gray" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/LightGreyDivider" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <com.ebay.park.views.TextViewDemi
+                android:id="@+id/tv_header4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:gravity="center_vertical"
+                android:paddingLeft="5dp"
+                android:text="@string/sorting"
+                android:textColor="@color/system_notification" />
+
+            <Spinner
+                android:id="@+id/spinner_order"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="0.7"
+                android:dropDownWidth="225dp"
+                android:background="@color/White"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/LightGreyDivider" />
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,16 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" >
+
+    <item
+        android:id="@+id/action_negotiations"
+        android:icon="@drawable/icon_negotiations"
+        android:title="@string/negotiations"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/action_search"
+        android:icon="@drawable/icon_white_search"
+        android:title="@string/global_search"
+        app:showAsAction="always"/>
+
+</menu>

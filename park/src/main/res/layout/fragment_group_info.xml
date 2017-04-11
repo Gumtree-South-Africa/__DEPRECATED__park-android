@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/main_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:background="@color/GrayBackground" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/iv_group_photo"
+            android:layout_width="match_parent"
+            android:layout_height="190dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/group_placeholder" />
+
+        <View
+            android:layout_width="match_parent"
+            android:background="@color/LightGraySeparator"
+            android:layout_height="1dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_margin="5dp"
+            android:orientation="vertical"
+            android:elevation="3dp"
+            android:background="@drawable/rounded_background_white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp">
+
+                <LinearLayout
+                    android:layout_width="225dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <com.ebay.park.views.TextViewDemi
+                        android:id="@+id/tv_group_name"
+                        style="@style/Label.Title.Group"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="13dp"
+                        android:layout_marginTop="12dp" />
+
+                    <ImageView
+                        android:id="@+id/share_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="7dp"
+                        android:paddingBottom="5dp"
+                        android:layout_marginTop="12dp"
+                        android:src="@drawable/icon_share" />
+                </LinearLayout>
+
+                <com.ebay.park.views.ButtonDemi
+                    android:id="@+id/btn_subscribe"
+                    style="@style/Button.Follow.Group"
+                    android:layout_width="65dp"
+                    android:layout_weight="1"
+                    android:layout_height="27dp"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="9dp"
+                    android:layout_marginLeft="9dp"
+                    android:text="@string/subscribe" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@drawable/divider_group"/>
+
+            <com.ebay.park.views.TextViewBook
+                android:id="@+id/tv_group_description"
+                style="@style/Label.Description.Group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingLeft="13dp"
+                android:paddingRight="13dp"
+                android:paddingTop="15dp" />
+
+            <LinearLayout
+                android:id="@+id/group_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_group_name"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="12dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <com.ebay.park.views.TextViewBook
+                    android:id="@+id/tv_group_location"
+                    style="@style/Label.Location.Group"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:drawableLeft="@drawable/icon_location"
+                    android:drawablePadding="6dp" />
+
+                <com.ebay.park.views.TextViewBook
+                    android:id="@+id/tv_group_users"
+                    style="@style/Label.Counters.Group"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:drawableLeft="@drawable/icon_count_people"
+                    android:drawablePadding="4dp" />
+
+                <com.ebay.park.views.TextViewBook
+                    android:id="@+id/tv_group_items"
+                    style="@style/Label.Counters.Group"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:drawableLeft="@drawable/icon_count_items"
+                    android:drawablePadding="4dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/group_subscribers_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:elevation="3dp"
+            android:background="@drawable/rounded_background_gray" >
+
+            <com.ebay.park.views.TextViewBook
+                android:id="@+id/tv_group_suscribers_label"
+                style="@style/Label.Suscribers.Group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:paddingTop="12dp"
+                android:text="@string/group_subscribers_label" />
+
+            <LinearLayout
+                android:id="@+id/ly_following_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_group_suscribers_label"
+                android:layout_marginTop="13dp"
+                android:layout_marginLeft="7dp"
+                android:layout_marginRight="7dp"
+                android:layout_marginBottom="13dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" />
+        </RelativeLayout>
+
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+        <RelativeLayout
+            android:id="@+id/group_admin"
+            android:layout_gravity="bottom"
+            android:layout_width="match_parent"
+            android:layout_height="115dp"
+            android:layout_marginTop="7dp">
+
+            <com.ebay.park.views.TextViewBook
+                android:id="@+id/tv_group_admin_label"
+                style="@style/Label.Admin.Group"
+                android:layout_width="match_parent"
+                android:layout_height="34dp"
+                android:text="@string/group_admin_label"
+                android:background="@color/DarkOrange"
+                android:paddingLeft="16dp"
+                android:paddingTop="5dp"
+                android:layout_alignParentBottom="true"/>
+
+            <LinearLayout
+                android:id="@+id/ly_group_admin"
+                android:layout_width="match_parent"
+                android:layout_height="66dp"
+                android:orientation="vertical"
+                android:background="@color/IndicatorOrange"
+                android:paddingTop="1dp"
+                android:layout_above="@id/tv_group_admin_label">
+
+                <com.ebay.park.views.TextViewDemi
+                    android:id="@+id/tv_group_admin"
+                    style="@style/Label.Admin.Group.Name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="85dp"
+                    android:paddingTop="6dp"/>
+
+                <com.ebay.park.views.TextViewBook
+                    android:id="@+id/tv_group_admin_location"
+                    style="@style/Label.Admin.Group"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/icon_pin_white"
+                    android:drawablePadding="5dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="85dp"
+                    android:paddingTop="5dp"/>
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_alignBottom="@id/ly_group_admin"
+                android:layout_marginRight="2dp"
+                android:layout_marginBottom="12dp"
+                android:layout_marginLeft="9dp">
+
+                <com.ebay.park.views.RoundImageView
+                    android:id="@+id/iv_group_admin_image"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/avatar_big_ph_image_fit"/>
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center"
+                    android:visibility="visible"
+                    android:src="@drawable/avatar_big_stroke"/>
+            </FrameLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</ScrollView>

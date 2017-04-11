@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true"
+            android:background="@color/DarkGrayDrawer" >
+
+    <RelativeLayout
+        android:id="@+id/lv_profile_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <FrameLayout
+            android:id="@+id/ly_image_profile_owner"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_profile_edit_picture"
+                android:layout_width="92dp"
+                android:layout_height="92dp"
+                android:layout_gravity="center"
+                android:src="@drawable/avatar_big_ph_image_fit_gray"/>
+
+            <ImageView
+                android:layout_width="103dp"
+                android:layout_height="103dp"
+                android:layout_gravity="center"
+                android:src="@drawable/avatar_big_mask_cam"/>
+        </FrameLayout>
+
+        <com.ebay.park.views.TextViewBook
+            android:id="@+id/tv_profile_edit_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/ly_image_profile_owner"
+            android:textColor="@color/White"
+            android:textSize="18sp" />
+
+        <com.ebay.park.views.TextViewBook
+            android:id="@+id/tv_profile_edit_mail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_profile_edit_username"
+            android:layout_marginTop="5dp"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/LightGrayEmail"
+            android:textSize="11sp"/>
+
+        <com.ebay.park.views.TextViewDemi
+            android:id="@+id/tv_profile_edit_zipcode_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_profile_edit_mail"
+            android:layout_marginTop="35dp"
+            android:layout_marginLeft="42dp"
+            android:textSize="11sp"
+            android:textColor="@color/LightGrayEditProfile"
+            android:text="@string/zipcode_spanish" />
+
+        <com.ebay.park.views.TextViewBook
+            android:id="@+id/tv_profile_edit_zipcode_only_us"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/tv_profile_edit_zipcode_label"
+            android:layout_toRightOf="@id/tv_profile_edit_zipcode_label"
+            android:layout_marginLeft="4dp"
+            android:layout_marginBottom="1dp"
+            android:textSize="9sp"
+            android:textColor="@color/LightGrayEditProfile"
+            android:text="@string/usonly" />
+
+        <com.ebay.park.views.EditTextMedium
+            android:id="@+id/et_profile_edit_zipcode"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_below="@id/tv_profile_edit_zipcode_label"
+            android:hint="@string/type_zip_code"
+            android:inputType="number"
+            android:maxLength="5"
+            android:textSize="13sp"
+            android:layout_marginTop="7dp"
+            android:layout_marginRight="35dp"
+            android:layout_marginLeft="35dp"
+            android:paddingLeft="7dp"
+            android:textColorHint="@color/DarkGrayDividerProfile"
+            android:textColor="@color/White"/>
+
+        <ProgressBar
+            android:id="@+id/pb_profile_edit_zip_code"
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/et_profile_edit_zipcode"
+            android:layout_alignRight="@id/et_profile_edit_zipcode"
+            android:layout_alignTop="@id/et_profile_edit_zipcode"
+            android:paddingRight="5dp"
+            android:visibility="gone" />
+
+        <com.ebay.park.views.TextViewBook
+            android:id="@+id/tv_profile_edit_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_below="@+id/et_profile_edit_zipcode"
+            android:textSize="11sp"
+            android:drawableLeft="@drawable/icon_pin_small_white"
+            android:drawablePadding="4dp"
+            android:layout_marginLeft="42dp"
+            android:gravity="center"
+            android:maxLines="1"
+            android:visibility="gone"
+            android:textColor="@color/White" />
+
+        <com.ebay.park.views.TextViewBook
+            android:id="@+id/tv_profile_edit_error"
+            style="@style/Label.Error.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_below="@+id/et_profile_edit_zipcode"
+            android:textSize="11sp"
+            android:drawablePadding="4dp"
+            android:layout_marginLeft="42dp"
+            android:visibility="gone"
+            android:gravity="center" />
+
+    </RelativeLayout>
+
+</ScrollView>

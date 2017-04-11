@@ -1,0 +1,164 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion '23.0.1'
+
+    defaultConfig {
+        applicationId "com.ebay.park"
+        minSdkVersion 19
+        targetSdkVersion 22
+        multiDexEnabled true
+
+        versionCode 1
+        versionName '2.1.0'
+
+        compileOptions {
+            sourceCompatibility JavaVersion.VERSION_1_7
+            targetCompatibility JavaVersion.VERSION_1_7
+        }
+    }
+
+    signingConfigs {
+        release {
+            storeFile file("FAKE_STORE_FILE")
+            storePassword "FAKE_STORE_PASSWORD"
+            keyAlias "FAKE_STORE_KEY_ALIAS"
+            keyPassword "FAKE_KEY_PASSWORD"
+        }
+    }
+
+    dexOptions {
+        preDexLibraries = false
+        javaMaxHeapSize "4g"
+    }
+
+    packagingOptions {
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'LICENSE'
+        exclude 'LICENSE.txt'
+    }
+
+    compileOptions.encoding = 'UTF-8'
+
+    buildTypes {
+        dev {
+            debuggable true
+            signingConfig signingConfigs.debug
+            resValue "string", "app_id", "647236968685917"
+            resValue "string", "ACCOUNT_KIT_CLIENT_TOKEN", "211e64730218edc4c65130959ced4a23"
+            resValue "string", "ak_login_protocol_scheme", "ak647236968685917"
+            resValue "string", "branch_io_scheme", "vivanuncios-test"
+        }
+        debug {
+            debuggable true
+            signingConfig signingConfigs.debug
+            resValue "string", "app_id", "660832997326314"
+            resValue "string", "ACCOUNT_KIT_CLIENT_TOKEN", "0148371a6626e8d817d539eedef23873"
+            resValue "string", "ak_login_protocol_scheme", "ak660832997326314"
+            resValue "string", "branch_io_scheme", "vivanuncios-test"
+        }
+        stg {
+            debuggable true
+            signingConfig signingConfigs.debug
+            resValue "string", "app_id", "676839865725627"
+            resValue "string", "ACCOUNT_KIT_CLIENT_TOKEN", "b978e83b4e217c2892b64e0bc419f7e5"
+            resValue "string", "ak_login_protocol_scheme", "ak676839865725627"
+            resValue "string", "branch_io_scheme", "vivanuncios-test"
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+            signingConfig signingConfigs.release
+            resValue "string", "app_id", "633329433410004"
+            resValue "string", "ACCOUNT_KIT_CLIENT_TOKEN", "c3db7a859524aea9dec9a2d69e4a5bca"
+            resValue "string", "ak_login_protocol_scheme", "ak633329433410004"
+            resValue "string", "branch_io_scheme", "vivanuncios"
+        }
+    }
+
+    sourceSets {
+        main {
+            java.srcDirs = ['src/main/java']
+        }
+        test {
+            java.srcDir file('src/test/java/')
+        }
+        androidTest {
+            java.srcDir file('src/androidTest/java/')
+        }
+    }
+
+    testOptions {
+        unitTests.returnDefaultValues = true
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+}
+
+ext {
+    sdkVersion = '23.4.0'
+    JUnitVersion = '4.12'
+    playServicesVersion = '9.0.2'
+    robospiceVersion = '1.4.12'
+    leakCanaryVersion = '1.3.1'
+}
+
+repositories {
+    mavenCentral()
+    jcenter()
+    jcenter{
+        url = 'http://dl.bintray.com/swrve-inc/android'
+    }
+}
+
+dependencies {
+    compile "com.google.android.gms:play-services-gcm:$playServicesVersion"
+    compile "com.google.android.gms:play-services-location:$playServicesVersion"
+    compile "com.google.android.gms:play-services-maps:$playServicesVersion"
+    compile "com.google.android.gms:play-services-analytics:$playServicesVersion"
+    compile "com.google.android.gms:play-services-auth:$playServicesVersion"
+    compile "com.google.android.gms:play-services-wearable:$playServicesVersion"
+    compile "com.android.support:appcompat-v7:$sdkVersion"
+    compile "com.android.support:design:$sdkVersion"
+    compile "com.octo.android.robospice:robospice:$robospiceVersion"
+    compile "com.octo.android.robospice:robospice-cache:$robospiceVersion"
+    compile "com.octo.android.robospice:robospice-okhttp:$robospiceVersion"
+    devCompile "com.squareup.leakcanary:leakcanary-android-no-op:$leakCanaryVersion"
+    debugCompile "com.squareup.leakcanary:leakcanary-android-no-op:$leakCanaryVersion"
+    stgCompile "com.squareup.leakcanary:leakcanary-android:$leakCanaryVersion"
+    releaseCompile "com.squareup.leakcanary:leakcanary-android-no-op:$leakCanaryVersion"
+    compile project(':androidsupportv4preferencefragment')
+    compile project(':library')
+    compile project(':cropimagelib')
+    compile project(':customfablibrary')
+    compile files('libs/microlog4android-1.0.0.jar')
+    compile files('libs/monkeytalk-agent-2.0.9.jar')
+    testCompile 'junit:junit:4.12'
+    testCompile 'com.jayway.restassured:rest-assured:2.4.1'
+    testCompile 'org.hamcrest:hamcrest-library:1.3'
+    testCompile 'org.mockito:mockito-core:1.9.5'
+    androidTestCompile 'junit:junit:4.12'
+    compile 'com.google.code.gson:gson:2.4'
+    compile 'com.squareup.okhttp:okhttp:1.5.4'
+    compile 'commons-codec:commons-codec:1.6'
+    compile 'com.facebook.android:facebook-android-sdk:4.11.0'
+    compile 'com.etsy.android.grid:library:1.0.5'
+    compile 'com.squareup.picasso:picasso:2.2.0'
+    compile 'com.splitwise:tokenautocomplete:2.0'
+    compile 'org.twitter4j:twitter4j-core:4.0.4'
+    compile 'com.crittercism:crittercism-android-agent:5.5.5'
+    compile 'com.android.support:multidex:1.0.1'
+    compile "com.android.support:support-v4:$sdkVersion"
+    compile 'com.swrve.sdk.android:swrve-google:4.6.0'
+    compile 'com.facebook.android:account-kit-sdk:4.12.0'
+    compile 'io.branch.sdk.android:library:2.+'
+    compile 'me.leolin:ShortcutBadger:1.1.11@aar'
+    wearApp project(':wear')
+}

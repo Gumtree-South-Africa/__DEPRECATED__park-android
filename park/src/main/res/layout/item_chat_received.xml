@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/message_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="8dp"
+                android:paddingTop="5dp"
+                android:layout_gravity="left" >
+
+    <FrameLayout
+        android:id="@+id/ly_baseline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true">
+
+        <ImageView
+            android:id="@+id/chat_profile_img"
+            android:layout_width="43dp"
+            android:layout_height="43dp"
+            android:layout_gravity="center"
+            android:src="@drawable/avatar_chat_ph_image_fit"/>
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:src="@drawable/avatar_chat_mask"/>
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="55dp"
+        android:layout_marginLeft="2dp"
+        android:orientation="vertical"
+        android:layout_toRightOf="@+id/ly_baseline"
+        android:background="@drawable/bg_message_other_reduced"
+        android:paddingLeft="17dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp">
+
+        <com.ebay.park.views.TextViewBook
+            android:id="@+id/chat_messagge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Label.Black.Medium.Small"
+            android:layout_toRightOf="@id/chat_profile_img"
+            android:textSize="13sp"
+            android:gravity="left"
+            tools:text="OFERTA HECHA POR"/>
+
+        <com.ebay.park.views.TextViewDemi
+            android:id="@+id/chat_price_offered"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Label.Black.Medium.Small"
+            android:layout_toRightOf="@id/chat_profile_img"
+            android:layout_marginTop="2dp"
+            android:textSize="13sp"
+            android:gravity="left"
+            android:visibility="gone"
+            tools:text="$60.00"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="4dp">
+
+            <com.ebay.park.views.TextViewBook
+                android:id="@+id/chat_messagge_buyer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:textSize="10sp"
+                tools:text="MissFortune"
+                android:textColor="@color/feed_filter_grey_border" />
+
+            <ImageView
+                android:id="@+id/chat_message_status_dot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/dot"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="3dp"
+                android:layout_marginLeft="3dp" />
+
+            <com.ebay.park.views.TextViewBook
+                android:id="@+id/chat_messagge_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:textSize="10sp"
+                tools:text="Hace un momento"
+                android:textColor="@color/feed_filter_grey_border" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

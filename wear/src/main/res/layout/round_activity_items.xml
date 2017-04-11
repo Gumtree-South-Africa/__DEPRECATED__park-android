@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.wearable.view.BoxInsetLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/black"
+    tools:context=".activities.FeaturesActivity"
+    tools:deviceIds="wear_round">
+
+    <ScrollView
+        android:id="@+id/scroll_items_layout"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_item_photo"
+                android:layout_width="match_parent"
+                android:layout_height="165dp"
+                android:layout_gravity="center"
+                android:scaleType="centerCrop"
+                android:src="@drawable/placeholder_img"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/GrayLine"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginTop="7dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/btn_previous"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:background="@mipmap/btn_previous"
+                    android:layout_marginRight="4dp"/>
+
+                <ImageButton
+                    android:id="@+id/btn_like"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:background="@mipmap/btn_unliked"/>
+
+                <ImageButton
+                    android:id="@+id/btn_next"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="4dp"
+                    android:background="@mipmap/btn_next"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="9dp"
+                android:textColor="@color/VivaTurquoise"
+                android:fontFamily="sans-serif-light"
+                android:layout_gravity="center_horizontal"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                tools:text="$550"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@color/GrayLine"/>
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:fontFamily="sans-serif-light"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="18dp"
+                tools:text="Computadora Macbook Pro como nueva"/>
+
+            <TextView
+                android:id="@+id/tv_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/Gray"
+                android:fontFamily="sans-serif-light"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="18dp"
+                android:textSize="11sp"
+                tools:text="Vendo excelente Macbook Pro del 2014 en muy buen estado. Funciona todo perfecto."/>
+
+            <ImageButton
+                android:id="@+id/see_on_device"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@mipmap/button_send_to_phone"/>
+
+            <fragment
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_marginTop="12dp"
+                android:id="@+id/map"
+                tools:context="com.ebay.park.activities.ItemActivity"
+                android:name="com.google.android.gms.maps.MapFragment"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/no_items_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/no_items_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:text="@string/no_items_search_message"/>
+
+        <TextView
+            android:id="@+id/no_items_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="12sp"
+            android:fontFamily="sans-serif-light"
+            android:textColor="@color/GrayLight"
+            android:text="@string/no_items_search_hint"/>
+
+    </LinearLayout>
+
+</android.support.wearable.view.BoxInsetLayout>
+

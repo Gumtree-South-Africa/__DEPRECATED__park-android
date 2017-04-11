@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rounded_background_white"
+    android:minHeight="56dp">
+
+    <FrameLayout
+        android:id="@+id/ly_image_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="3dp">
+
+        <ImageView
+            android:id="@+id/rate_profile_img"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_gravity="center"
+            android:src="@drawable/avatar_medium_ph_image_fit"/>
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:src="@drawable/avatar_medium_mask"/>
+    </FrameLayout>
+    
+	<com.ebay.park.views.TextViewBook
+        android:id="@+id/rate_username"
+        android:layout_width="51dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/ly_image_user"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="10dp"
+        android:maxWidth="51dp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textColor="@color/VivaLightBlue"
+        android:textSize="12sp" />
+
+    <com.ebay.park.views.TextViewBook
+        android:id="@+id/rate_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/rate_username"
+        android:layout_below="@id/rate_username"
+        android:textSize="9sp"
+        android:textColor="@color/feed_filter_grey"
+        android:layout_marginTop="1dp" />
+	
+	<com.ebay.park.views.TextViewDemi
+        android:id="@+id/rate_item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="7dp"
+        android:textColor="@color/DarkGrayDivider"
+        android:textSize="12sp"/>
+
+	<com.ebay.park.views.TextViewBook
+        android:id="@+id/rate_comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rate_item_name"
+        android:layout_alignLeft="@id/rate_item_name"        
+        android:layout_marginTop="2dp"
+        android:layout_marginRight="13dp"
+        android:textSize="12sp"
+        android:layout_marginBottom="9dp"
+        android:textColor="@color/DarkGrayDivider"/>
+
+    <ImageView
+        android:id="@+id/rate_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
+        android:src="@drawable/icon_rating_positive" />
+
+</RelativeLayout>

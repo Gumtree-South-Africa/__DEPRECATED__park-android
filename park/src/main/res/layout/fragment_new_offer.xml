@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              tools:context="com.ebay.park.fragments.NewOfferFragment"
+              android:orientation="vertical"
+              android:background="@color/White"
+              android:paddingTop="60dp">
+
+    <com.ebay.park.views.TextViewBook
+        android:id="@+id/new_offer_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:textColor="@color/system_notification"
+        android:layout_gravity="center_horizontal"
+        tools:text="SebastianP vende su producto a $65"/>
+
+    <com.ebay.park.views.TextViewDemi
+        android:id="@+id/new_offer_question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textSize="15sp"
+        android:textColor="@color/system_notification"
+        android:layout_marginTop="5dp"
+        tools:text="¿Cuánto quieres ofertar por él?"/>
+
+    <com.ebay.park.views.EditTextBook
+        android:id="@+id/new_offer_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="40sp"
+        android:paddingRight="6dp"
+        android:paddingLeft="6dp"
+        android:minWidth="140dp"
+        android:gravity="center"
+        android:inputType="numberDecimal"
+        android:textColor="@color/system_notification"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="36dp"
+        android:drawablePadding="10dp"
+        android:focusable="true"
+        tools:text="$6"/>
+
+    <com.ebay.park.views.TextViewBook
+        android:id="@+id/new_offer_error"
+        style="@style/Label.Error.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:paddingTop="5dp"
+        android:gravity="center"
+        android:visibility="gone"
+        android:text="@string/invalid_price_offer"/>
+
+</LinearLayout>

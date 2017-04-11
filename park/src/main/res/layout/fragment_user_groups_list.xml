@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/list_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ly_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/new_light_gray"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/DarkGrayDrawer"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <com.ebay.park.views.TextViewBook
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/group_select_descrip"
+                android:textColor="@color/GrayBackground"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/SpecialGrey"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingRight="5dp">
+
+            <com.ebay.park.views.TextViewDemi
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:text="@string/tv_groups_suggested"
+                android:textColor="@color/system_banner" />
+
+            <com.ebay.park.views.TextViewBook
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="10"
+                android:paddingRight="5dp"
+                android:gravity="right"
+                android:text="@string/group_select_all"
+                android:textColor="@color/system_notification" />
+
+            <!--<CheckBox-->
+                <!--android:id="@+id/chbGroup"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="0.5"-->
+                <!--android:button="@null"-->
+                <!--android:drawableRight="@drawable/checkbox_states_green" />-->
+
+            <ImageView
+                android:id="@+id/iv_select_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:src="@drawable/checkbox_mixed" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/user_groups_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/GrayBackground"
+        android:clipToPadding="false"
+        android:divider="@null"
+        android:dividerHeight="6dp"
+        android:paddingBottom="6dp"
+        android:paddingTop="6dp"
+        android:verticalSpacing="6dp"></ListView>
+
+</LinearLayout>

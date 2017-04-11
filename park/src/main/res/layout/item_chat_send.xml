@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/message_layout"
+    android:paddingRight="7dp"
+    android:paddingTop="5dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="right">
+
+    <LinearLayout
+        android:id="@+id/message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="17dp"
+        android:layout_marginLeft="100dp"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/bg_message_own_reduced"
+        android:orientation="vertical">
+
+        <com.ebay.park.views.TextViewBook
+            android:id="@+id/chat_messagge"
+            style="@style/Label.Black.Medium.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            tools:text="Sdasdasdas as asdasda a sdasdasdas sds sds aa dsa sdasdasdasdas assda asdasda asdasda asdada asdasd asdas."
+            android:gravity="left"/>
+
+        <com.ebay.park.views.TextViewDemi
+            android:id="@+id/chat_price_offered"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Label.Black.Medium.Small"
+            android:layout_toRightOf="@id/chat_profile_img"
+            android:layout_marginTop="2dp"
+            android:textSize="13sp"
+            android:gravity="left"
+            android:visibility="gone"
+            tools:text="$60.00"/>
+
+        <com.ebay.park.views.TextViewBook
+            android:id="@+id/chat_messagge_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_gravity="left"
+            android:textSize="10sp"
+            tools:text="Hace un momento"
+            android:textColor="@color/ChatTimeGray"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

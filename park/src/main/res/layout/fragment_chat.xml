@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/chat_fragment_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/White"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/chat_item_detail"
+        android:layout_width="match_parent"
+        android:layout_height="82dp"
+        android:paddingRight="10dp"
+        android:elevation="3dp"
+        android:background="@color/White" >
+
+        <FrameLayout
+            android:id="@+id/chat_item_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginRight="6dp">
+
+            <ImageView
+                android:id="@+id/chat_item_img"
+                android:layout_width="68dp"
+                android:layout_height="68dp"
+                android:src="@drawable/img_placeholder" />
+
+            <ImageView
+                android:layout_width="68dp"
+                android:layout_height="68dp"
+                android:src="@drawable/mask_pending_image_inner_stroke_full"/>
+        </FrameLayout>
+
+        <com.ebay.park.views.TextViewDemi
+            android:id="@+id/chat_item_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="9dp"
+            android:layout_toRightOf="@id/chat_item_image"
+            android:layout_marginLeft="2dp"
+            android:textColor="@color/DarkGrayDivider"
+            tools:text="hello from the other side"
+            android:textSize="14sp"/>
+
+        <com.ebay.park.views.TextViewBook
+            android:id="@+id/chat_published_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Publicado en $65"
+            android:textColor="@color/feed_filter_grey"
+            android:textSize="11sp"
+            android:layout_alignLeft="@id/chat_item_title"
+            android:layout_below="@id/chat_item_title"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="4dp"/>
+
+        <View
+            android:id="@+id/chat_divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignLeft="@id/chat_item_title"
+            android:layout_below="@id/chat_published_price"
+            android:background="@color/LightGreyDivider"/>
+
+        <com.ebay.park.views.ButtonDemi
+            android:id="@+id/btn_chat_new_negotiation"
+            style="@style/Button.Chat"
+            android:background="@drawable/make_offer_button_selector"
+            android:layout_width="115dp"
+            android:layout_height="25dp"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:stateListAnimator="@null"
+            android:layout_alignBottom="@id/chat_item_image"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="2dp"
+            android:layout_alignParentRight="true"
+            android:visibility="gone"
+            android:text="@string/make_an_offer" />
+
+        <com.ebay.park.views.ButtonDemi
+            android:id="@+id/btn_chat_accept_negotiation"
+            style="@style/Button.Chat"
+            android:background="@drawable/accept_offer_button_selector"
+            android:layout_width="115dp"
+            android:layout_height="25dp"
+            android:focusable="false"
+            android:visibility="gone"
+            android:focusableInTouchMode="false"
+            android:stateListAnimator="@null"
+            android:layout_alignBottom="@id/chat_item_image"
+            android:layout_toLeftOf="@id/btn_chat_new_negotiation"
+            android:text="@string/accept_negotiation" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+        <ListView
+            android:id="@+id/chat_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@null"
+            android:background="@color/GrayBackground"
+            android:dividerHeight="5dp" />
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="visible" />
+
+        <RelativeLayout
+            android:id="@+id/ly_cancelled"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/WhiteLowAlpha"
+            android:visibility="gone" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/IndicatorOrange"
+                android:orientation="horizontal"
+                android:layout_marginBottom="50dp"
+                android:layout_alignParentBottom="true"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingLeft="11dp"
+                android:paddingRight="11dp" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_alert_white"
+                    android:layout_marginRight="11dp"
+                    android:layout_marginTop="3dp"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.ebay.park.views.TextViewDemi
+                        android:id="@+id/tv_canceller_message_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/White"
+                        android:textSize="12sp"/>
+
+                    <com.ebay.park.views.TextViewBook
+                        android:layout_marginTop="4dp"
+                        android:id="@+id/tv_canceller_message_hint"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/White"
+                        android:textSize="12sp"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/feed_filter_grey_border" />
+
+    <LinearLayout
+        android:id="@+id/chat_controls"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="45dp"
+        android:background="@color/White">
+
+        <com.ebay.park.views.EditTextBook
+            android:id="@+id/chat_message_et"
+            style="@style/CustomInput.Chat"
+            android:layout_width="0dp"
+            android:layout_weight="7"
+            android:layout_marginLeft="11dp"
+            android:paddingLeft="6dp"
+            android:paddingRight="15dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:hint="@string/rate_comment_hint"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:maxLength="250"
+            android:maxLines="5"/>
+
+        <ImageView
+            android:id="@+id/chat_send"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_marginRight="6dp"
+            android:layout_marginBottom="10dp"
+            android:background="@android:color/transparent"
+            android:enabled="false"
+            android:src="@drawable/btn_send_message_selector" />
+    </LinearLayout>
+</LinearLayout>

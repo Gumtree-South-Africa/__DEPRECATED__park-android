@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="VivaTurquoise">#00D9DC</color>
+    <color name="DarkGray">#3B3B3B</color>
+    <color name="Gray">#666666</color>
+    <color name="GrayLine">#222222</color>
+    <color name="GrayLight">#999999</color>
+
+</resources>

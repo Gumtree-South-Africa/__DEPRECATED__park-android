@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="rate_list_item_thumb_width">55dp</dimen>
+    <dimen name="rate_list_item_thumb_height">55dp</dimen>
+    <dimen name="rate_list_user_thumb_width">22dp</dimen>
+    <dimen name="rate_list_user_thumb_height">22dp</dimen>
+</resources>

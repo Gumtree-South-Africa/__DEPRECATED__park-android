@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Vivanuncios</string>
+
+    <string name="logout">Cerrar sesión</string>
+    <string name="loggingout">Cerrando sesión</string>
+    <string name="none"></string>
+
+    <!-- ParkActivity -->
+    <string name="invite_fb_friends">Invitar amigos en Facebook</string>
+    <string name="my_profile">Mi perfil</string>
+    <string name="publish">PUBLICAR</string>
+    <string name="drawer_open">Abierto</string>
+    <string name="drawer_close">Cerrado</string>
+
+    <!-- ActivityFeed -->
+    <string name="all_feed_filter">Novedades</string>
+    <string name="only_mine_filter">Mis Anuncios</string>
+    <string name="feeds_no_result_msg">¡Vaya! No hay notificaciones para mostrar</string>
+    <string name="feeds_no_result_hint">Seguro recibirás algunas pronto</string>
+
+    <!-- ItemDetailActivity -->
+    <string name="details">Detalles del ítem</string>
+    <string name="sell_title">Vender</string>
+    <string name="sell_item_confirm_message">Selecciona esta opción sólo después de haber concretado la venta, cuando el comprador haya retirado el artículo y recibas el dinero.</string>
+    <string name="republish_item_confirm_title">Republicar</string>
+    <string name="republish_item_confirm_message">¿Estás seguro que deseas republicar tu anuncio?</string>
+    <string name="item_republished">El ítem fue republicado con éxito</string>
+    <string name="share_selector">Compartir el ítem a</string>
+    <string name="item_share_subject">Mira este ítem en Vivanuncios</string>
+    <string name="item_share_body">Ingresa a Vivanuncios a ver el ítem en</string>
+    <string name="item_sold">Ítem vendido</string>
+    <string name="item_reported">Aviso reportado</string>
+    <string name="item_negociate_unable_title">Ítem no disponible</string>
+    <string name="item_negociate_unable_message">El ítem no está disponible en este momento</string>
+    <string name="item_groups_list_all">Listar todos</string>
+    <string name="report_item">Reportar aviso</string>
+    <string name="error_reporting_item">No se pudo reportar el ítem, intente nuevamente</string>
+    <string name="no_group">Sin grupo asignado</string>
+    <string name="item_set_as_sold">Marcar como vendido</string>
+    <string name="item_groups_list_title">Lista de Grupos</string>
+    <string name="like_menu">Me gusta</string>
+
+    <!-- Login -->
+    <string name="title_activity_login">Ingresar con e-mail</string>
+    <string name="title_navdrawer_login">Ingresar</string>
+    <string name="enter_valid_email">El e-mail ingresado no es válido</string>
+    <string name="username_or_email">Ingresa tu e-mail</string>
+    <string name="enter_email_rec">Por favor ingresa tu correo electrónico</string>
+    <string name="password">Ingresa tu contraseña</string>
+    <string name="login">INGRESAR</string>
+    <string name="register_label">Regístrate</string>
+    <string name="forgot_password">¿Recuperar contraseña?</string>
+    <string name="enter_with_cred">Ingresa con tus credenciales</string>
+    <string name="facebook_login">Ingresa con Facebook</string>
+    <string name="terms_of_service_text">Al registrarse está aceptando los</string>
+    <string name="terms_of_service_fb">Al ingresar con Facebook está aceptando los</string>
+    <string name="terms_of_service">Términos de uso y Políticas de Privacidad</string>
+    <string name="legal_dec">Declaración Legal</string>
+    <string name="invalid_user_pass">El nombre de usuario y/o contraseña son incorrectos</string>
+    <string name="error_generic">Ocurrió un error, por favor intente más tarde</string>
+    <string name="linked_with_fb_success">Vinculado a Facebook correctamente</string>
+    <string name="linked_with_tw_success">Vinculado a Twitter correctamente</string>
+    <string name="unlinked_from_tw_success">Desvinculado de Twitter correctamente</string>
+    <string name="unlinked_from_fb_success">Desvinculado de Facebook correctamente</string>
+    <string name="error_facebook_result">Hubo un error temporal conectándose a Facebook o canceló el login manualmente. Por favor, intente nuevamente</string>
+    <string name="all_mandatory_fields">Todos los campos son obligatorios</string>
+    <string name="enter_with_sms">número móvil</string>
+    <string name="enter_with_email">e-mail</string>
+
+    <!-- Registration -->
+    <string name="registration_title">Registrarse con e-mail</string>
+    <string name="registration_button_text">REGISTRARSE</string>
+    <string name="registration_button_text_finish">Finalizar</string>
+    <string name="pick_name">Nombre</string>
+    <string name="pick_username">Nombre de usuario</string>
+    <string name="choose_password">Contraseña</string>
+    <string name="repeat_password">Repite la contraseña</string>
+    <string name="password_no_match">Las contraseñas no coinciden</string>
+    <string name="zip_code">ZIP code</string>
+    <string name="invalid_zip_code">Ingresa un ZIP code válido</string>
+    <string name="invalid_regist_zip_code">Ingresa un zip code válido (USA &amp; PR)</string>
+    <string name="enter_email">Ingresa tu e-mail</string>
+    <string name="error_save_image">No se pudo guardar la imagen, por favor intente de nuevo</string>
+    <string name="already_taken_email">Email duplicado</string>
+    <string name="error_img_upload">No se pudo subir la foto de perfil</string>
+    <string name="check_registration_info">Todos los campos son obligatorios</string>
+    <string name="incorrect_password">La contraseña debe tener entre 6 y 15 caracteres</string>
+    <string name="re_enter_email">Reingresa tu e-mail</string>
+    <string name="pick_lastname">Apellido</string>
+    <string name="enter_zip_code">Zip Code (limitado a USA)</string>
+    <string name="edit_regist_location_label">¿No es tu ubicación?</string>
+    <string name="email_match_confirmation">Las direcciones de e-mail no coinciden</string>
+    <string name="invalid_name">El nombre debe tener entre %1$d y %2$d letras</string>
+    <string name="invalid_lastname">El apellido debe tener entre %1$d y %2$d letras</string>
+    <string name="invalid_username">El nombre de usuario debe tener entre %1$d y %2$d caracteres</string>
+
+    <!-- Address format -->
+    <string name="address_output_string">%1$s, %2$s</string>
+
+    <!-- ItemListActivity -->
+    <string name="buy_items_navdrawer_title">Comprar</string>
+    <string name="search_hint">Ingresa tu búsqueda</string>
+    <string name="filter">Filtros de ítems</string>
+    <string name="ready">Listo</string>
+    <string name="so_ready">¡Listo!</string>
+
+
+    <!-- Item Create Edit Activity -->
+    <string name="title_user_groups">Grupos suscriptos</string>
+    <string name="description">Descripción</string>
+    <string name="select_category">p.ej. Deportes</string>
+    <string name="what_selling">p.ej. Bicicleta de paseo</string>
+    <string name="share_on">Compartir en</string>
+    <string name="invalid_price">Ingresa un precio mayor a $ 0</string>
+    <string name="invalid_item_name">Ingresa un nombre de entre %1$d y %2$d caracteres alfanuméricos</string>
+    <string name="invalid_item_description">La descripción del ítem no puede contener dos puntos ni punto y coma</string>
+    <string name="publish_picture_not_selected">Debes seleccionar una foto de portada</string>
+    <string name="publish_cancel">¿Estás seguro que deseas cancelar?</string>
+    <string name="unable_to_load_groups">Imposible cargar grupos</string>
+    <string name="add_a_group">Agregar/quitar grupos</string>
+    <string name="check_fields_with_errors">Revise los campos con errores</string>
+    <string name="error_select_category">Debes seleccionar una categoría</string>
+    <string name="title_publish">Anunciar</string>
+    <string name="title_publish_edit">Editar anuncio</string>
+    <string name="location_label">¿Dónde quieres encontrarte con tus compradores?</string>
+    <string name="edit_location_label">¿No es esta tu ubicación?</string>
+    <string name="edit_location_message">Modificar</string>
+    <string name="image_loading_unsoported">El tipo de imagen seleccionado no es soportado</string>
+
+    <!-- UpdateActivity -->
+    <string name="update_empty">El campo no puede quedar vacío</string>
+    <string name="update_user_unauthorized">El usuario no está autorizado</string>
+    <string name="update_item_not_found">Ítem no encontrado.</string>
+    <string name="update_item_doesnt_belong_to_user">Ítem no pertenece al usuario</string>
+
+    <!-- DeleteActivity -->
+    <string name="delete_successfully">Eliminación exitosa</string>
+    <string name="delete_failed">Falló la eliminación</string>
+    <string name="delete_item_confirm">¿Estás seguro que deseas eliminar este anuncio?</string>
+    <string name="deleting_picture">Error elminando foto</string>
+    <string name="delete_picture_not_found">Imagen no encontrada</string>
+    <string name="delete_picture_cannot_be_deleted">La imagen no puede ser borrada</string>
+
+    <!-- Groups -->
+    <string name="title_navdrawer_groups">Grupos</string>
+    <string name="group_details">Detalles del grupo</string>
+    <string name="create_group_successfully">Grupo creado exitosamente</string>
+    <string name="update_group_successfully">Grupo actualizado exitosamente</string>
+    <string name="delete_group_successfully">Grupo eliminado exitosamente</string>
+    <string name="invalid_group_name">Ingresa un nombre de entre %1$d y %2$d caracteres alfanuméricos</string>
+    <string name="invalid_group_description">La descripción del grupo no puede contener dos puntos ni punto y coma</string>
+    <string name="group_name">Nombre del Grupo</string>
+    <string name="group_name_hint">Ingresa un nombre</string>
+    <string name="group_description">Ingresa una descripción</string>
+    <string name="subscribe">Suscribir</string>
+    <string name="unsubscribe">Suscripto</string>
+    <string name="group_zip_limited">(limitado a USA)</string>
+    <string name="group_publish">Publicar</string>
+    <string name="group_share_on">Comparte tu grupo en:</string>
+    <string name="create_group">Crear Grupo</string>
+    <string name="edit_group">Editar Grupo</string>
+    <string name="group_select_all">Seleccionar todos</string>
+    <string name="group_select_descrip">Tu ítem será publicado en todos los grupos seleccionados</string>
+    <string name="group_tab_info">Perfil Grupal</string>
+    <string name="group_tab_items">Items del Grupo</string>
+    <string name="group_tab_users">Usuarios Suscriptos</string>
+    <string name="group_share_selector">Compartir grupo en</string>
+    <string name="group_share_subject">Mira este grupo en Vivanuncios</string>
+    <string name="group_share_body">Ingresa a Vivanuncios a ver el grupo en</string>
+    <string name="items_label">Items</string>
+    <string name="group_admin_label">Administrador del grupo</string>
+    <string name="group_subscribers_label">Usuarios que sigues suscriptos al grupo</string>
+    <string name="group_delete">Eliminar Grupo</string>
+    <string name="group_create">Crear</string>
+    <string name="group_delete_confirm">¿Estás seguro que deseas eliminar este grupo?</string>
+    <string name="group_items_edit">Revisión de ítems</string>
+    <string name="group_followers_edit">Revisión de suscriptores</string>
+    <string name="group_remove_item">Remover</string>
+    <string name="group_items_removed_success">Los ítems se eliminaron exitosamente</string>
+    <string name="group_delete_items_confirm">¿Estás seguro que deseas eliminar los ítems?</string>
+    <string name="group_delete_followers_confirm">¿Estás seguro que deseas remover los usuarios suscriptos?</string>
+    <string name="group_tab_nearby">Grupos Cercanos</string>
+    <string name="group_tab_subscribed">Grupos Suscriptos</string>
+    <string name="group_tab_my_groups">Mis Grupos</string>
+    <string name="posted_in_groups">Publicado en los grupos</string>
+
+    <!-- Filters -->
+    <string name="cancel">Cancelar</string>
+    <string name="max_distance">DISTANCIA MÁXIMA</string>
+    <string name="price_range">RANGO DE PRECIOS</string>
+    <string name="no_limit">Sin límite</string>
+    <string name="number_of_miles">millas</string>
+
+    <!-- Profile -->
+    <string name="user_since">Usuario desde %s</string>
+    <string name="followers">seguidores</string>
+    <string name="following">siguiendo</string>
+    <string name="followersUp">Seguidores</string>
+    <string name="followingUp">Siguiendo</string>
+    <string name="preferences">Preferencias</string>
+    <string name="error_loading_user">No se pudo cargar el usuario, intente más tarde.</string>
+    <string name="profile">Perfil</string>
+    <string name="user_profile">Perfil de usuario</string>
+    <string name="profile_share_selector">Compartir perfil en</string>
+    <string name="profile_share_subject">Mira este perfil en Vivanuncios</string>
+    <string name="profile_share_body">Ingresa a Vivanuncios a ver el perfil en</string>
+    <string name="offers_recieved">ofertas recibidas</string>
+    <string name="offers">Ofertas</string>
+    <string name="offers_sales_title">Ofertas de Venta</string>
+    <string name="purchase_offers_title">Ofertas de Compra</string>
+
+    <!-- Preferences -->
+    <string name="change_password">Modificar contraseña</string>
+    <string name="notifications">Push</string>
+    <string name="preferences_title">Opciones</string>
+    <string name="title_navdrawer_help">Soporte</string>
+    <string name="notifications_config">Notificaciones</string>
+    <string name="link_social_networks">Vincular redes sociales</string>
+    <string name="publish_invite_to_friends">Enviar invitación a tus amigos</string>
+    <string name="resend_verification_email">Enviar email de verificación</string>
+    <string name="about">Sobre Viva</string>
+    <string name="feedback_support">Sugerencias / Soporte</string>
+    <string name="send_verification_email_success">Un e-mail de verificación ha sido enviado</string>
+    <string name="notification_config_updated">Configuración actualizada!</string>
+    <string name="change_password_succesful">Contraseña modificada exitosamente</string>
+
+    <!-- Edit Profile -->
+    <string name="edit_profile">Editar perfil</string>
+    <string name="edit">EDITAR</string>
+    <string name="edit_low">Editar</string>
+    <string name="error_cannot_get_address">No se pudo obtener la ubicación</string>
+    <string name="error_no_locations_for_this_zip_code">No existen ubicaciones con ese código postal</string>
+    <string name="profile_updated">Perfil actualizado</string>
+    <string name="current_zip_code">Código postal actual</string>
+    <string name="follow">seguir</string>
+
+    <!-- My lists -->
+    <string name="my_lists_title">Mis listas</string>
+    <string name="my_lists_spinner_op1">Items preferidos</string>
+    <string name="my_lists_spinner_op2">Items de usuarios que sigo</string>
+    <string name="my_lists_spinner_op3">Items de grupos suscriptos</string>
+
+    <!-- Followers -->
+    <string name="make_offer">Ofertar</string>
+    <string name="delete">Eliminar</string>
+    <string name="cancel_negotiation">Cancelar negociación</string>
+    <string name="accept_negotiation">Aceptar Oferta</string>
+
+    <!-- Global Search -->
+    <string name="global_search">Búsquedas Globales</string>
+    <string name="tab_title_items">Items</string>
+    <string name="tab_title_users">Usuarios</string>
+    <string name="tab_title_groups">Grupos</string>
+    <string name="recommended">Recomendados</string>
+
+    <!-- Conversation List -->
+    <string name="conversation_preffix_own_message">"Tú: "</string>
+    <string name="chat_invalid_message">El mensaje debe tener entre %1$d y %2$d caracteres</string>
+    <string name="chat_cancellation_hint">Razón para cancelar</string>
+    <string name="chat_accepted_successfully">Negociación aceptada!</string>
+
+    <!-- Rates -->
+    <string name="title_activity_ratelist">Calificaciones de %s</string>
+    <string name="title_activity_my_ratelist">Mis Ratings</string>
+    <string name="tab_rate_seller">Como Vendedor</string>
+    <string name="tab_rate_buyer">Como Comprador</string>
+    <string name="tab_rate_pending">Pendientes</string>
+    <string name="pending_rate_dismiss_title">Descartar</string>
+    <string name="pending_rate_dismiss_message">¿Estás seguro que deseas eliminar esta calificación pendiente?</string>
+    <string name="pending_rate_successfull">Gracias por calificar!</string>
+    <string name="rate_comment_hint">Escribe un mensaje</string>
+
+    <!-- Group Filters -->
+    <string name="a_to_z">A a Z</string>
+    <string name="group_filters_title">Filtros de grupos</string>
+
+    <string name="accept">Aceptar</string>
+    <string name="yes">Si</string>
+    <string name="no">No</string>
+    <string name="recovery_email_sent">Su correo ha sido enviado satisfactoriamente</string>
+    <string name="recovery_email_fail">No hemos encontrado ese dirección de e-mail</string>
+    <string name="invite_mail_body">Ingresa y descubre Vivanuncios en</string>
+    <string name="invite_mail_subject">Invitación a usar Vivanuncios</string>
+    <string name="feedback_mail_body">Ingrese un texto descriptivo aquí</string>
+    <string name="feedback_mail_subject">Sugerencia/Pedido de Soporte</string>
+    <string name="invite_friends">Invita a tus amigos</string>
+    <string name="invite_drw_fb_friends">Invita desde Facebook</string>
+    <string name="current_password">Escribe tu contraseña actual</string>
+    <string name="new_password">Elige una nueva contraseña</string>
+    <string name="all">Todas</string>
+    <string name="social">Social</string>
+    <string name="warning">Atención</string>
+    <string name="account_not_verified_message">¡Ooops! Aún no has verificado tu correo electrónico. Para
+        hacerlo, puedes loguearte con Facebook o utilizar el mail que te enviamos al registrarte. ¿Quieres que te enviemos ese mail nuevamente?</string>
+    <string name="account_not_verified_positive">Sí, enviarlo!</string>
+    <string name="account_not_verified_negative">No, gracias</string>
+    <string name="account_banned">Cuenta baneada</string>
+    <string name="account_banned_text">Su cuenta ha sido baneada</string>
+    <string name="accept_negotiation_confirm">¿Estás seguro que deseas aceptar la oferta por %s?</string>
+    <string name="cancel_negotiation_confirm">¿Estás seguro que deseas cancelar esta negociación?</string>
+    <string name="mail">mail</string>
+    <string name="notif_config_item_pending">Item pendiente de moderación</string>
+    <string name="notif_config_new_message_rec">Nuevo mensaje recibido</string>
+    <string name="notif_config_offer_accepted">Oferta aceptada</string>
+    <string name="notif_config_user_rated_you">Un usuario te ha calificado</string>
+    <string name="notif_config_starts_following_you">Nuevo seguidor</string>
+    <string name="notif_config_sold_an_item">Items en tus listas fueron vendidos</string>
+    <string name="no_internet">Conexión no disponible</string>
+    <string name="sorting">ORDENAR POR</string>
+    <string name="nearest">Cercanía</string>
+    <string name="category">Categoría</string>
+    <string name="category_title">CATEGORÍA</string>
+    <string name="groups">¿Quieres incluir tu ítem en Grupos para mejorar\n su llegada a otros usuarios y vender más rápido?</string>
+    <string name="usonly">(Limitado a USA)</string>
+    <string name="title">¿Qué estás vendiendo?</string>
+    <string name="optional">(opcional)</string>
+    <string name="lowest_price">Precio más bajo</string>
+    <string name="highest_price">Precio más alto</string>
+    <string name="lowest">mín.</string>
+    <string name="highest">máx.</string>
+    <string name="published_date">Fecha de publicación</string>
+    <string name="recover_pass">Recuperar contraseña</string>
+    <string name="my_publications">Mis clasificados</string>
+    <string name="negotiation_chat">Chat de oferta</string>
+    <string name="general">General</string>
+    <string name="title_session_expired">Sesión expirada</string>
+    <string name="camera_label">Cámara</string>
+    <string name="gallery_label">Galería</string>
+    <string name="users_filter">Filtros de Usuarios</string>
+    <string name="item_no_longer_availiable">El ítem ya no se encuentra disponible</string>
+    <string name="time_now">Ahora</string>
+    <string name="error_no_internet">No hay conexión de internet por el momento. Por favor verifique y reintente nuevamente.</string>
+    <string name="error_timeout">Problemas de conexión. Por favor, intente nuevamente en un momento</string>
+    <string name="remove">Remover</string>
+    <string name="autopublish_message">Para utilizar esta función debes vincular tus redes sociales a través de la\nopción \"Cuentas vinculadas\" del menú de opciones
+        disponible en \"Mi Perfil\"</string>
+    <string name="type_zip_code">Ingresa tu ZIP code</string>
+    <string name="aviso">Aviso</string>
+    <string name="sold">Anuncio vendido</string>
+    <string name="cancelled">Negociación cancelada</string>
+    <string name="update">Actualizar</string>
+    <string name="image_too_small">La imagen no puede ser menor a 200x200px. Por favor, elija una diferente</string>
+    <string name="image_too_small_simple">La imagen no puede ser menor a 200x200px.</string>
+    <string name="description_hint">Danos más detalles de tu producto</string>
+    <string name="item_description">p.ej. Bicicleta usada, color rojo...</string>
+    <string name="price_hint">¿A cuánto lo quieres vender?</string>
+    <string name="price_sample">p.ej. $150</string>
+    <string name="category_hint">¿A qué categoría pertenece tu producto?</string>
+    <string name="item_share_on">¿Quieres compartir tu anuncio?</string>
+    <string name="need_login">Login necesario</string>
+    <string name="not_logged">¡Un momento, por favor! Necesitamos identificarte para poder seguir adelante. Ingresa con tu cuenta o crea una si aún no lo has hecho</string>
+    <string name="error_generic_image">Ocurrió un error, por favor intente nuevamente.</string>
+    <string name="unlogged_subscribed_groups">Aquí se listarán los grupos a los que estés suscripto</string>
+    <string name="unlogged_my_groups">Aquí se listarán los grupos que hayas creado</string>
+    <string name="unlogged_subs_or_my_groups_hint">Para verlos debes loguearte usando la opción en el menú</string>
+    <string name="title_activity_filter">FilterActivity</string>
+    <string name="item_deleted">¡Ups! Este ítem no está disponible en este momento. Con suerte vuelva a publicarse o encuentres otro similar. ¡No te rindas!</string>
+    <string name="title_activity_map">Mapa</string>
+    <string name="app_recover">Se ha recuperado de un error</string>
+    <string name="app_recover_info">En el último uso su dipositivo se quedó sin memoria suficiente</string>
+    <string name="request_generic_error">Lo sentimos. Ha ocurrido un error inesperado. Por favor, intente nuevamente en un momento</string>
+
+    <!-- Camera Fragment -->
+    <string name="camera_set_principal">Marcar como principal</string>
+    <string name="camera_crop">Mover y escalar</string>
+    <string name="camera_delete">Eliminar imagen</string>
+    <string name="incredible">¡Se ve increíble!</string>
+    <string name="camera_photos_hint"><![CDATA[Revisa tus fotos debajo o <br/> presiona <b>Siguiente</b> para continuar]]></string>
+    <string name="edit_photos">¡Edita tus fotos!</string>
+    <string name="edit_photos_hint"><![CDATA[Revisa tus fotos debajo o <br/> presiona <b>Hecho</b> para regresar <br/> al anuncio]]></string>
+    <string name="next_step">Siguiente</string>
+    <string name="done_step">Hecho</string>
+    <string name="camera_dialog_hint"><![CDATA[<b>¡Buen Ángulo!</b><br/><br/>Toma hasta 4 fotos en total,<br/>luego presiona <b>Siguiente</b>]]></string>
+
+    <!-- Item Published Fragment -->
+    <string name="title_activity_item_published">Anuncio publicado</string>
+    <string name="item_published_congrats">¡Felicidades!</string>
+    <string name="item_published_hint">Tu anuncio será publicado en</string>
+    <string name="tv_share_groups">Compártelo en Grupos de interés para tener\nllegada directa a compradores interesados</string>
+    <string name="tv_groups_suggested">Grupos sugeridos</string>
+
+    <string name="facebook_invite_initialize">Iniciando...</string>
+
+    <!-- Viva v2 -->
+    <string name="negotiations">Negociaciones</string>
+    <string name="terms_of_service_nocapitals"><u>términos de uso y políticas de privacidad.</u></string>
+    <string name="register_fb_title">Ingresar con Facebook</string>
+    <string name="recover_pass_hint">e-mail</string>
+    <string name="recover_pass_error">Ingresa una dirección de correo válida</string>
+    <string name="new_banned_error_message">Lamentablemente tu cuenta fue suspendida\n y no es posible recuperar tu contraseña.\n Por favor contacta al soporte técnico</string>
+    <string name="group_enter_photo">Agrega una foto para tu grupo</string>
+    <string name="group_image_error">Por favor sube una imagen para el grupo</string>
+    <string name="group_zip_code">Ingresa tu ZIP code</string>
+    <string name="add_photo_dialog_title">Agregar foto</string>
+    <string name="add_image">Agregar imagen</string>
+    <string name="ratelist_nocapital">calificaciones</string>
+    <string name="myrates_nocapital">mis calificaciones</string>
+    <string name="published_items">anuncios publicados</string>
+    <string name="more_100_rates">99+</string>
+    <string name="zipcode_spanish">Código Postal</string>
+    <string name="rate">Calificar</string>
+    <string name="rate_warning">Elige una calificación e ingresa un comentario</string>
+    <string name="notifications_push_config">Notificaciones Push</string>
+    <string name="invite_my_friends">Enviar invitación a mis amigos</string>
+    <string name="account">Cuenta</string>
+    <string name="configuration">Configuración</string>
+    <string name="linked_accounts">Cuentas vinculadas</string>
+    <string name="terms_conditions">Términos y Condiciones</string>
+    <string name="facebook">Facebook</string>
+    <string name="twitter">Twitter</string>
+    <string name="make_an_offer">Haz una oferta</string>
+    <string name="published_price">Publicado en %s</string>
+    <string name="accepted_price">Cerrado en %s</string>
+    <string name="your_offer">Tu Oferta</string>
+    <string name="new_offer_hint">%1$s vende su producto a %2$s</string>
+    <string name="new_offer_question">¿Cuánto quieres ofertar por él?</string>
+    <string name="new_offer_confirmation">Estás ofertando por %s ¿Confirmas tu oferta?</string>
+    <string name="re_offer_hint">%1$s ofertó %2$s por el producto</string>
+    <string name="re_offer_question">¿Cuánto quieres contraofertar por él?</string>
+    <string name="re_offer_confirmation">Estás contraofertando por %s ¿Confirmas tu contraoferta?</string>
+    <string name="my_offer_hint">El producto está publicado a %s</string>
+    <string name="my_re_offer_hint">La última oferta fue de %s</string>
+    <string name="my_offer_question">¿A cuánto quieres ofertarlo?</string>
+    <string name="my_re_offer_question">¿Quieres mejorarla?</string>
+    <string name="show_user_rates">Ver calificaciones del usuario</string>
+    <string name="invalid_price_offer">Por favor ingresa un precio mayor a $0</string>
+    <string name="connect_easily">Conéctate fácil y rápido</string>
+    <string name="connect_account_kit">o ingresa sin contraseña usando</string>
+    <string name="connect_email">o usa tu e-mail</string>
+    <string name="else_case">o bien</string>
+    <string name="processing">Procesando...</string>
+    <string name="cancel_negotiation_title">La negociación ha sido cancelada</string>
+    <string name="cancel_negotiation_no_reason">No se detalló una razón</string>
+    <string name="dialog_rate_hint">Escribe tu calificación</string>
+    <string name="rate_message_hint">Mensaje</string>
+    <string name="negotiation">Negociación</string>
+    <string name="login_with_sms">Ingresar con número móvil</string>
+    <string name="login_with_email">Ingresar con e-mail</string>
+    <string name="create_user">Crea tu usuario de Vivanuncios</string>
+    <string name="account_kit_canceled">Se ha cancelado el ingreso</string>
+    <string name="account_kit_error">Se ha producido un error al ingresar</string>
+    <string name="username_duplicated">¡Este nombre de usuario ya está en uso!</string>
+    <string name="message_chat_rule">El mensaje debe tener entre 1 y 250 caracteres</string>
+    <string name="offer_accepted">Oferta aceptada</string>
+    <string name="notif_config_fb_friend">Tu amigo de Facebook está usando Viva</string>
+    <string name="text_ok">OK</string>
+    <string name="ooops">¡Ooops!</string>
+    <string name="mail_not">No puedes activar las notificaciones por mail. Para hacerlo, puedes linkear tu cuenta de Facebook.</string>
+    <string name="find_your_fb_friends">Encuentra a tus amigos de Facebook</string>
+    <string name="find_your_fb_friends_title">Amigos de Facebook</string>
+    <string name="your_friendship">Tu amistad</string>
+    <string name="friendship_of">Amistad de</string>
+    <string name="facebook_not_linked">No has vinculado tu cuenta de Vivanuncios con Facebook</string>
+    <string name="facebook_not_linked_hint">Puedes solucionar esto ya mismo ingresando a \'Cuentas vinculadas\' en la pantalla de opciones</string>
+    <string name="facebook_friends_not_granted">¡No te quedes afuera!</string>
+    <string name="facebook_friends_not_granted_hint">Con un permiso extra sabrás que amigo usa Vivanuncios</string>
+    <string name="link_account">Vincular cuenta</string>
+    <string name="invite_friends_tit">Invitar amigos</string>
+    <string name="have_account">¿Ya tienes una cuenta?</string>
+    <string name="enter_email_address">Ingresa tu correo electrónico</string>
+    <string name="login_with_cred">Ingresa con tus credenciales</string>
+    <string name="not_have_account">¿Todavía no tienes tu cuenta creada? Regístrate</string>
+    <string name="here"><u>aquí</u></string>
+    <string name="set_password">Si no tienes contraseña puedes establecer una</string>
+    <string name="send">ENVIAR</string>
+    <string name="set_valid_email">Ingresa un e-mail válido</string>
+    <string name="set_password_hint">Por favor ingresa tu dirección de correo electrónico para que podamos enviarte una contraseña provisoria a tu casilla. Luego podrás modificarla en las opciones dentro de tu cuenta.</string>
+    <string name="set_password_title">Establecer contraseña</string>
+    <string name="set_password_ok">Hemos enviado una contraseña provisoria a tu casilla de e-mail. Revisa tu bandeja de entrada y sigue las indicaciones para comenzar a usar Viva.</string>
+    <string name="no_thanks">No gracias</string>
+    <string name="register_user">REGISTRARME</string>
+    <string name="title_drawer_legal">Legales</string>
+
+</resources>

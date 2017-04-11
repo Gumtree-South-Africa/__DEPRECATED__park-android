@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppBaseTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+
+    <style name="AppTheme" parent="AppBaseTheme">
+        <item name="android:actionMenuTextAppearance">@style/ParkActionBar.MenuTextStyle</item>
+        <item name="android:actionMenuTextColor">@color/White</item>
+        <item name="actionMenuTextColor">@color/White</item>
+        <item name="android:spinnerDropDownItemStyle">@style/SpinnerItemStyle</item>
+        <item name="android:popupMenuStyle">@style/ParkPopupMenu</item>
+        <item name="drawerArrowStyle">@style/VivaDrawerArrowToggle</item>
+        <item name="colorAccent">@color/accent</item>
+        <item name="colorControlNormal">@color/GrayBackground</item>
+        <item name="android:homeAsUpIndicator">@drawable/icon_white_back</item>
+        <item name="android:actionButtonStyle">@style/ActionButton</item>
+        <item name="android:actionOverflowButtonStyle">@style/ButtonOverflow</item>
+        <item name="android:textAppearanceLargePopupMenu">@style/PopupMenuTextAppearanceLarge</item>
+        <item name="android:textAppearanceSmallPopupMenu">@style/PopupMenuTextAppearanceSmall</item>
+    </style>
+
+    <style name="ParkActionBar" parent="Widget.AppCompat.Toolbar">
+        <item name="android:background">@color/VivaTurquoise</item>
+        <item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
+        <item name="theme">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>
+    </style>
+
+    <style name="ActivityThemeNoTranslucent" parent="AppTheme">
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:statusBarColor">@color/StatusbarBlue</item>
+    </style>
+
+</resources>
